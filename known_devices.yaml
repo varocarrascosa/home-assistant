@@ -1,6 +1,6 @@
 
 phone_phone:
-  hide_if_away: true
+  hide_if_away: false
   mac:
   name: Alvaro
   picture: http://cliparts.co/cliparts/6cr/5kB/6cr5kBdxi.jpg
