@@ -1,1 +1,1 @@
-get_latest_config: bash /home/hass/.homeassistant/bin/pullconfig.sh
+get_latest_config: C:\Users\alvar\AppData\Roaming\bin\pullconfig.cmd

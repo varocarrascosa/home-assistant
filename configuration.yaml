@@ -64,7 +64,7 @@ camera:
   - platform: foscam
     ip: 10.0.0.177
     username: cam1    
-    password: varoCARR98
+    password: !secret cam1_pass
     port: 88
 
 #Shell commands
@@ -76,8 +76,8 @@ mqtt:
   port: 10944
   client_id: homeassistant
   keepalive: 60
-  username: qeklginx
-  password: zrGdf9_cgl62
+  username: !secret broker_user
+  password: !secret broker_pass
   birth_message:
     topic: 'hass/status'
     payload: 'online'
@@ -118,7 +118,7 @@ group:
 
 #Wink
 wink:
-  access_token: EL6DI9mFWD3gntnvx1J0qT5d4KLgw8nb
+  access_token: !secret wink_access_token
 
 #Automations
 automation:
@@ -143,3 +143,9 @@ automation:
     service: light.turn_off
     entity_id: light.back_room_light
     
+#Scripts
+script:
+  update_config:
+    sequence:
+      - service: shell_command.get_latest_config
+      - service: homeassistant.restart
