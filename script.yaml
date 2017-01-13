@@ -39,3 +39,9 @@ night_music:
     - service: media_player.media_pause
       data:
         entity_id: media_player.alvaros
+
+update_config:
+  alias: 'Update & Restart'
+  sequence:
+    - service: shell_command.get_latest_config
+    - service: homeassistant.restart
