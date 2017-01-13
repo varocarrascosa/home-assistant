@@ -14,7 +14,26 @@ homeassistant:
   customize:
     light.back_room_light:
       friendly_name: Back Room Light
-  
+    sensor.eta_homeschool:
+      friendly_name: Home to School
+      icon: mdi:car
+    group.MorningInfo:
+      friendly_name: Driving
+      order: '2'
+    group.alvaro_lights:
+      friendly_name: Lights
+      order: '1'
+    group.alarm_clock:
+      friendly_name: Alarm Clock
+    group.all_scripts:
+      friendly_name: Options
+      hidden: false
+      control: hidden
+    script.night_music:
+      icon: mdi:music-circle
+    script.say:
+      hidden: true
+      
 
 # Show links to resources in log and frontend
 #introduction:
@@ -48,11 +67,34 @@ sun:
 
 # Weather Prediction
 sensor:
-  platform: yr
+  - platform: yr
   
+  - platform: google_travel_time
+    api_key: AIzaSyCzCLAODj0XpjXyT8tKBr2Q9_EvVOSukJI
+    origin: 1040 Mariner Dr Key Biscayne
+    destination: 6575 N Kendall Dr Pinecrest
+    name: 'ETA Home-School'
 # Text to speech
 tts:
   platform: google
+
+#Automations
+automation: !include automation.yaml
+
+#Scripts
+script: !include script.yaml
+
+#Inputs
+input_select: !include selects.yaml
+
+#Booleans
+input_boolean: !include booleans.yaml
+
+#Notifications
+notify:
+  - name: HomeAssistant
+    platform: pushbullet
+    api_key: o.BztWEwiqEoUY1kIjpN3gV5p3P4JnJBZL
 
 #Media
 media_player:
@@ -91,22 +133,27 @@ mqtt:
 #Trackin
 device_tracker:
   - platform: owntracks
-    max_gps_accuracy: 200
     waypoints: True
+
 zone:
   name: Home
   latitude: 25.683539
   longitude: -80.166588
-  radius: 400
+  radius: 100
   icon: mdi:home
+  
 
 #Customization
 group:
   default_view:
     view: yes
     entities:
-      - device_tracker.phone_phone
-      - light.back_room_light
+      - device_tracker.alvaro_alvaro
+      - device_tracker.rodrigo_rodrigo
+      - group.alvaro_lights
+      - group.all_scripts
+      - group.MorningInfo
+      - group.alarm_clock
   Surveillance:
     view: yes
     entities:
@@ -115,37 +162,20 @@ group:
     view: yes
     entities:
       - media_player.alvaros
+  MorningInfo:
+    entities:
+      - sensor.eta_homeschool
+  alvaro_lights:
+    icon: mdi:light
+    entities:
+      light.back_room_light
+  alarm_clock:
+    icon: mdi:alarm
+    entities:
+      - input_select.alarm_clock
+      - input_boolean.alarm_clock
+      - input_boolean.lightalarmclock
 
 #Wink
 wink:
   access_token: !secret wink_access_token
-
-#Automations
-automation:
-- alias: 'Turn off Room lights when I leave'
-  trigger:
-    platform: state
-    entity_id: device_tracker.phone_phone
-    state: 'not_home'
-  action:
-    service: light.turn_off
-    entity_id: light.back_room_light
-    
-- alias: 'Turn off lights at night if im home'
-  trigger:
-    platform: time
-    after: '02:00:00'
-  condition:
-    condition: state
-    entity_id: device_tracker.phone_phone
-    state: 'home'
-  action:
-    service: light.turn_off
-    entity_id: light.back_room_light
-    
-#Scripts
-script:
-  update_config:
-    sequence:
-      - service: shell_command.get_latest_config
-      - service: homeassistant.restart

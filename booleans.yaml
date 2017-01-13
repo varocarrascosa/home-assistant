@@ -1,0 +1,8 @@
+alarm_clock:
+  name: 'Alarm Clock'
+  initial: off
+  icon: mdi:alarm
+lightalarmclock: #Not in use yet
+  name: 'Natural'
+  initial: off
+  icon: mdi:theme-light-dark

@@ -1,0 +1,104 @@
+- alias: 'Leaving (Alvaro)'
+  trigger:
+    platform: state
+    entity_id: device_tracker.alvaro_alvaro
+    state: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: group.set_visibility
+      entity_id: group.MorningInfo
+      data:
+        visible: False
+
+- alias: 'Home (Rodrigo)'
+  trigger:
+    platform: state
+    entity_id: device_tracker.rodrigo_rodrigo
+    state: 'home'
+  action:
+    - service: notify.homeassistant
+      data:
+        message: "Rodrigo has just arrived home"
+- alias: 'Leaving (Rodrigo)'
+  trigger:
+    platform: state
+    entity_id: device_tracker.rodrigo_rodrigo
+    state: 'not_home'
+  action:
+    - service: notify.homeassistant
+      data:
+        message: "Rodrigo has just left home"
+
+- alias: 'Home (Alvaro)'
+  trigger:
+    platform: state
+    entity_id: device_tracker.alvaro_alvaro
+    state: 'home'
+  action:
+    - service: group.set_visibility
+      entity_id: group.MorningInfo
+      data:
+        visible: True
+        
+        
+
+- alias: 'Turn off everything'
+  trigger:
+    platform: time
+    after: '02:30:00'
+  condition:
+    condition: state
+    entity_id: device_tracker.alvaro_alvaro
+    state: 'home'
+  action:
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: media_player.media_pause
+      entity_id: media_player.alvaros
+
+- alias: 'Alarm Clock'
+  trigger:
+    platform: time
+    minutes: '/5'
+  condition: 
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ now().strftime("%H:%M") == states.input_select.alarm_clock.state }}'
+      - condition: state
+        entity_id: media_player.alvaros
+        state: 'paused'
+      - condition: state
+        entity_id: input_boolean.alarm_clock
+        state: "on"
+  action:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.alvaros
+        source: 'Hunting for Witches'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.alvaros
+        volume_level: .4
+- alias: 'Stop Alarm'
+  trigger:
+    platform: state
+    entity_id: input_boolean.alarm_clock
+    to: 'off'
+  action:
+    service: media_player.media_pause
+    data:
+      entity_id: media_player.alvaros
+
+- alias: 'Stop Music Night'
+  trigger:
+    platform: state
+    entity_id: script.night_music
+    to: "off"
+  action:
+    service: media_player.media_pause
+    data:
+      entity_id: media_player.alvaros
+
+    
