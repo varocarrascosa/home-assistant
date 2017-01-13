@@ -18,7 +18,7 @@ homeassistant:
       friendly_name: Home to School
       icon: mdi:car
     group.MorningInfo:
-      friendly_name: Driving Test
+      friendly_name: Driving
       order: '2'
     group.alvaro_lights:
       friendly_name: Lights
