@@ -34,7 +34,7 @@ homeassistant:
     script.say:
       hidden: true
       
-
+#test
 # Show links to resources in log and frontend
 #introduction:
 
