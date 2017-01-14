@@ -147,17 +147,17 @@ zone:
     longitude: -80.166588
     radius: 100
     icon: mdi:home
-  - name: Gulliver Prep
+  - name: "G Prep"
     latitude: 25.689507
     longitude: -80.299706
     radius: 400
     icon: mdi:school
-  - name: Gulliver Miller
+  - name: "G Miller"
     latitude: 25.717383
     longitude: -80.323472
     radius: 200
     icon: mdi:school
-  - name: "Ashlee's House"
+  - name: "Ashlee's"
     latitude: 25.719046
     longitude: -80.307822
     radius: 150
