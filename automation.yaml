@@ -1,8 +1,25 @@
+- alias: 'Home (Alvaro)'
+  trigger:
+    platform: state
+    entity_id: device_tracker.alvaro_alvaro
+    from: 'not_home'
+    to: 'home'
+  action:
+    - service: group.set_visibility
+      entity_id: group.MorningInfo
+      data:
+        visible: True
+    - service: notify.homeassistant
+      data:
+        title: "test"
+        message: "Alvaro has just arrived home"
+ 
 - alias: 'Leaving (Alvaro)'
   trigger:
     platform: state
     entity_id: device_tracker.alvaro_alvaro
-    state: 'not_home'
+    from: 'home'
+    to: 'not_home'
   action:
     - service: light.turn_off
       entity_id: group.all_lights
@@ -10,6 +27,9 @@
       entity_id: group.MorningInfo
       data:
         visible: False
+    - service: notify.homeassistant
+      data:
+        message: "Alvaro has just left home"
 
 - alias: 'Home (Rodrigo)'
   trigger:
@@ -32,16 +52,6 @@
       data:
         message: "Rodrigo has just left home"
 
-- alias: 'Home (Alvaro)'
-  trigger:
-    platform: state
-    entity_id: device_tracker.alvaro_alvaro
-    state: 'home'
-  action:
-    - service: group.set_visibility
-      entity_id: group.MorningInfo
-      data:
-        visible: True
         
         
 
