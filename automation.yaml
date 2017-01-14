@@ -15,7 +15,8 @@
   trigger:
     platform: state
     entity_id: device_tracker.rodrigo_rodrigo
-    state: 'home'
+    from: 'not_home'
+    to: 'home'
   action:
     - service: notify.homeassistant
       data:
@@ -24,7 +25,8 @@
   trigger:
     platform: state
     entity_id: device_tracker.rodrigo_rodrigo
-    state: 'not_home'
+    from: 'home'
+    to: 'not_home'
   action:
     - service: notify.homeassistant
       data:
