@@ -26,7 +26,7 @@ homeassistant:
     group.alarm_clock:
       friendly_name: Alarm Clock
     group.all_scripts:
-      friendly_name: Options
+      friendly_name: Commands
       hidden: false
       control: hidden
     script.night_music:
