@@ -11,7 +11,7 @@
         visible: True
     - service: notify.homeassistant
       data:
-        title: "test"
+        title: "Alvaro is home"
         message: "Alvaro has just arrived home"
  
 - alias: 'Leaving (Alvaro)'
@@ -29,6 +29,7 @@
         visible: False
     - service: notify.homeassistant
       data:
+        title: "Alvaro just left home"
         message: "Alvaro has just left home"
 
 - alias: 'Home (Rodrigo)'
@@ -40,6 +41,7 @@
   action:
     - service: notify.homeassistant
       data:
+        title: "Rodrigo is home"
         message: "Rodrigo has just arrived home"
 - alias: 'Leaving (Rodrigo)'
   trigger:
@@ -50,6 +52,7 @@
   action:
     - service: notify.homeassistant
       data:
+        title: "Rodrigo just left home"
         message: "Rodrigo has just left home"
 
         
