@@ -144,7 +144,17 @@ zone:
     longitude: -80.166588
     radius: 100
     icon: mdi:home
-
+  - name: Gulliver Prep
+    latitude: 25.689507
+    longitude: -80.299706
+    radius: 400
+    icon: mdi:school
+  - name: Gulliver Miller
+    latitude: 25.717383
+    longitude: -80.323472
+    radius: 200
+    icon: mdi:school
+    
 #Customization
 group:
   default_view:
