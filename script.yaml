@@ -44,5 +44,5 @@ update_config:
   alias: 'Update & Restart'
   sequence:
     - service: shell_command.get_latest_config
-    - delay: 00:00:10
+    - delay: 00:00:05
     - service: homeassistant.restart
