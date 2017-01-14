@@ -16,7 +16,7 @@ homeassistant:
       friendly_name: Back Room Light
     sensor.eta_homeschool:
       friendly_name: Home to School
-      icon: mdi:car
+      icon: mdi:timer-sand
     group.MorningInfo:
       friendly_name: Driving
       order: '2'
