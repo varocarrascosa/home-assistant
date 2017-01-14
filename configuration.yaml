@@ -25,6 +25,7 @@ homeassistant:
       order: '1'
     group.alarm_clock:
       friendly_name: Alarm Clock
+      control: hidden
     group.all_scripts:
       friendly_name: Commands
       hidden: false
