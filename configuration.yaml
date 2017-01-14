@@ -134,7 +134,6 @@ mqtt:
 device_tracker:
   - platform: owntracks
     waypoints: True
-    max_gps_accuracy: 200
 
 zone:
   - name: Home
