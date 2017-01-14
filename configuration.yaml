@@ -157,6 +157,11 @@ zone:
     longitude: -80.323472
     radius: 200
     icon: mdi:school
+  - name: "Ashlee's House"
+    latitude: 25.719046
+    longitude: -80.307822
+    radius: 150
+    icon: mdi:home
     
 #Customization
 group:
