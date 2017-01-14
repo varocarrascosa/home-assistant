@@ -157,7 +157,7 @@ zone:
     longitude: -80.323472
     radius: 200
     icon: mdi:school
-  - name: "Ashlee's"
+  - name: Ashlee
     latitude: 25.719046
     longitude: -80.307822
     radius: 150
