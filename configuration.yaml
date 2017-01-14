@@ -153,6 +153,7 @@ group:
       - group.all_scripts
       - group.MorningInfo
       - group.alarm_clock
+      - group.cars
   Surveillance:
     view: yes
     entities:
@@ -168,6 +169,10 @@ group:
     icon: mdi:light
     entities:
       light.back_room_light
+  cars:
+    icon: mdi:car
+    entities:
+      - device_tracker.beacon_varocar
   alarm_clock:
     icon: mdi:alarm
     entities:
