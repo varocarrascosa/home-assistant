@@ -134,13 +134,20 @@ mqtt:
 device_tracker:
   - platform: owntracks
     waypoints: True
+    max_gps_accuracy: 200
 
 zone:
-  name: Home
-  latitude: 25.683539
-  longitude: -80.166588
-  radius: 100
-  icon: mdi:home
+  - name: Home
+    latitude: 25.683539
+    longitude: -80.166588
+    radius: 100
+    icon: mdi:home
+  - name: Alvaro's
+    latitude: 25.683539
+    longitude: -80.166588
+    radius:10
+  
+  
   
 
 #Customization
