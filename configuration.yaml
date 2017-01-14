@@ -153,8 +153,8 @@ zone:
     radius: 400
     icon: mdi:school
   - name: "Miller"
-    latitude: 25.717383
-    longitude: -80.323472
+    latitude: 25.716813
+    longitude: -80.325366
     radius: 200
     icon: mdi:school
   - name: Ashlee
