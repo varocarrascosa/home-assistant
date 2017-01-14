@@ -37,6 +37,8 @@ homeassistant:
     device_tracker.beacon_varocar:
       icon: mdi:car
       friendly_name: C63 AMG
+    device_tracker.alvaro_alvaro:
+      entity_picture: https://mybluerobot.com/wp-content/plugins/svg-avatars-generator/data/temp-avatars/svgA21230366034433246.png
       
 
 # Show links to resources in log and frontend
