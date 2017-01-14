@@ -154,7 +154,6 @@ group:
       - group.all_scripts
       - group.MorningInfo
       - group.alarm_clock
-      - script.update_config
   Surveillance:
     view: yes
     entities:
