@@ -145,7 +145,7 @@ zone:
   - name: Alvaro's
     latitude: 25.683539
     longitude: -80.166588
-    radius:10
+    radius: 10
   
   
   
