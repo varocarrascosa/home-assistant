@@ -142,13 +142,6 @@ zone:
     longitude: -80.166588
     radius: 100
     icon: mdi:home
-  - name: Alvaro's
-    latitude: 25.683539
-    longitude: -80.166588
-    radius: 10
-  
-  
-  
 
 #Customization
 group:
