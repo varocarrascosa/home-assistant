@@ -33,6 +33,9 @@ homeassistant:
       icon: mdi:music-circle
     script.say:
       hidden: true
+    device_tracker.beacon_varocar:
+      icon: mdi:car
+      friendly_name: C63 AMG
       
 
 # Show links to resources in log and frontend
@@ -170,7 +173,6 @@ group:
     entities:
       light.back_room_light
   cars:
-    icon: mdi:car
     entities:
       - device_tracker.beacon_varocar
   alarm_clock:
