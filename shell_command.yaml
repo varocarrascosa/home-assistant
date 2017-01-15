@@ -1,3 +1,3 @@
-get_latest_config: bash /home/homeassistant/.homeassistant/pullconfig.sh
+get_latest_config: bash /home/homeassistant/.homeassistant/cmds/pullconfig.sh
 
-order_dominos: bash /home/homeassistant/.homeassistant/dominos.sh
+order_dominos: bash /home/homeassistant/.homeassistant/cmds/dominos.sh
