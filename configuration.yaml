@@ -172,6 +172,12 @@ zone:
     radius: 150
     icon: mdi:home
     
+#Panels
+panel_iframe:
+  dominos:
+    title: 'Dominos'
+    url: "hhtps://www.dominos.com"
+    
 #Customization
 group:
   default_view:
