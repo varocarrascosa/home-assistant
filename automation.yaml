@@ -65,7 +65,7 @@
   action:
     service: input_slider.select_value
     data_template:
-      entity_id: input_slider.volume_outside
+      entity_id: media_player.outside
       value: '{{ states.media_player.outside.attributes.volume_level }}'
 - alias: 'Volume Outside'
   trigger: 
@@ -83,7 +83,7 @@
   action:
     service: input_slider.select_value
     data_template:
-      entity_id: input_slider.volume_alvaros
+      entity_id: media_player.alvaros
       value: '{{ states.media_player.alvaros.attributes.volume_level }}'
 - alias: 'Volume Inside'
   trigger: 
