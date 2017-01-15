@@ -176,7 +176,7 @@ zone:
 panel_iframe:
   dominos:
     title: 'Dominos'
-    url: "https://www.dominos.com"
+    url: 'https://www.gulliverschools.org'
     
 #Customization
 group:
