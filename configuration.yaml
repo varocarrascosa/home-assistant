@@ -30,6 +30,8 @@ homeassistant:
       friendly_name: Commands
       hidden: false
       control: hidden
+    group.volume_control:
+      friendly_name: Media Control
     script.night_music:
       icon: mdi:music-circle
     script.say:
@@ -41,6 +43,8 @@ homeassistant:
       entity_picture: https://mybluerobot.com/wp-content/plugins/svg-avatars-generator/data/temp-avatars/svgA21230366034433246.png
     device_tracker.rodrigo_rodrigo:
       entity_picture: https://mybluerobot.com/wp-content/plugins/svg-avatars-generator/data/temp-avatars/svgA026911773076625956.png
+      
+     
 # Show links to resources in log and frontend
 #introduction:
 
@@ -210,6 +214,7 @@ group:
     icon: mdi:music-note-eighth
     entities:
       - input_slider.volume_outside
+      - input_slider.volume_alvaros
  
 #Wink
 wink:

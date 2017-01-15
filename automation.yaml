@@ -1,3 +1,4 @@
+#Leaving & Entries
 - alias: 'Home (Alvaro)'
   trigger:
     platform: state
@@ -31,7 +32,6 @@
       data:
         title: "Alvaro just left home"
         message: "Alvaro has just left home"
-
 - alias: 'Home (Rodrigo)'
   trigger:
     platform: state
@@ -54,10 +54,49 @@
       data:
         title: "Rodrigo just left home"
         message: "Rodrigo has just left home"
-
         
         
 
+#Media
+- alias: 'Media Refresh (Outside)'
+  trigger:
+    platform: state
+    entity_id: media_player.outside
+  action:
+    service: input_slider.select_value
+    data_template:
+      entity_id: media_player.outside
+      value: '{{ states.media_player.outside.attributes.volume_level }}'
+- alias: 'Volume Outside'
+  trigger: 
+    platform: state
+    entity_id: input_slider.volume_outside
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.outside
+      volume_level: '{{ trigger.to_state.state | float }}'
+- alias: 'Media Refresh (Inside)'
+  trigger:
+    platform: state
+    entity_id: media_player.alvaros
+  action:
+    service: input_slider.select_value
+    data_template:
+      entity_id: media_player.alvaros
+      value: '{{ states.media_player.alvaros.attributes.volume_level }}'
+- alias: 'Volume Inside'
+  trigger: 
+    platform: state
+    entity_id: input_slider.volume_alvaros
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.alvaros
+      volume_level: '{{ trigger.to_state.state | float }}'
+      
+
+#Night turn off
 - alias: 'Turn off everything'
   trigger:
     platform: time
@@ -71,7 +110,10 @@
       entity_id: group.all_lights
     - service: media_player.media_pause
       entity_id: media_player.alvaros
+      
+      
 
+#Alarm
 - alias: 'Alarm Clock'
   trigger:
     platform: time
@@ -106,6 +148,9 @@
     data:
       entity_id: media_player.alvaros
 
+
+
+#Script Stop
 - alias: 'Stop Music Night'
   trigger:
     platform: state
@@ -116,13 +161,4 @@
     data:
       entity_id: media_player.alvaros
 
-- alias: 'Volume Outside'
-  trigger: 
-    platform: state
-    entity_id: input_slider.volume_outside
-  action:
-    service: media_player.volume_set
-    data_template:
-      entity_id: media_player.outside
-      volume_level: '{{ trigger.to_state.state | float }}'
-        
+
