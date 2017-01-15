@@ -115,12 +115,6 @@ media_player:
     hosts: 
       - 10.0.0.31
       - 10.0.0.208
-  - platform: universal
-    name: Media Central
-    children:
-      - media_player.alvaros
-      - media_player.outside
-      
 
 # Cameras Security
 camera:
@@ -191,7 +185,6 @@ group:
       - group.alarm_clock
       - group.cars
       - group.volume_control
-      - media_player.media_central
   Surveillance:
     view: yes
     entities:
