@@ -123,6 +123,8 @@ camera:
     username: cam1    
     password: !secret cam1_pass
     port: 88
+  - platform: generic
+    still_image_url: "https://cache.dominos.com/olo/4_2_2/assets/build/market/US/_en/images/promo/DPZ_2016_mixmatch_hero.jpg"
 
 #Shell commands
 shell_command: !include shell_command.yaml
@@ -172,11 +174,6 @@ zone:
     radius: 150
     icon: mdi:home
     
-#Panels
-panel_iframe:
-  dominos:
-    title: 'Dominos'
-    url: 'https://www.gulliverschools.org'
     
 #Customization
 group:
