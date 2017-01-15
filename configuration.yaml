@@ -218,6 +218,7 @@ group:
     entities:
       - input_slider.volume_outside
       - input_slider.volume_alvaros
+      - camera.generic_camera
  
 #Wink
 wink:
