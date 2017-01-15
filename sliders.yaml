@@ -1,0 +1,6 @@
+volume_outside:
+  name: 'Volume'
+  initial: 0
+  min: 0
+  max: 1
+  step: .05

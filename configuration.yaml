@@ -96,6 +96,9 @@ input_select: !include selects.yaml
 #Booleans
 input_boolean: !include booleans.yaml
 
+#Sliders
+input_slider: !include sliders.yaml
+
 #Notifications
 notify:
   - name: HomeAssistant
@@ -177,6 +180,7 @@ group:
       - group.MorningInfo
       - group.alarm_clock
       - group.cars
+      - group.volume_control
   Surveillance:
     view: yes
     entities:
@@ -202,7 +206,11 @@ group:
       - input_select.alarm_clock
       - input_boolean.alarm_clock
       - input_boolean.lightalarmclock
-
+  volume_control:
+    icon: mdi:music-note-eighth
+    entities:
+      - input_slider.volume_outside
+ 
 #Wink
 wink:
   access_token: !secret wink_access_token

@@ -1,3 +1,10 @@
+update_config:
+  alias: 'Update & Restart'
+  sequence:
+    - service: shell_command.get_latest_config
+    - delay: 00:00:05
+    - service: homeassistant.restart
+
 say:
   alias: SONOS TTS
   sequence:
@@ -34,15 +41,9 @@ night_music:
     - service: media_player.volume_set
       data:
         entity_id: media_player.alvaros
-        volume_level: .1
+        volume_level: .15
     - delay: 01:00:00
     - service: media_player.media_pause
       data:
         entity_id: media_player.alvaros
-
-update_config:
-  alias: 'Update & Restart'
-  sequence:
-    - service: shell_command.get_latest_config
-    - delay: 00:00:05
-    - service: homeassistant.restart
+        
