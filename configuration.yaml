@@ -191,6 +191,7 @@ group:
       - group.alarm_clock
       - group.cars
       - group.volume_control
+      - media_player.media_central
   Surveillance:
     view: yes
     entities:
