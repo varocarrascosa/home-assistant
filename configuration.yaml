@@ -176,7 +176,7 @@ zone:
 panel_iframe:
   dominos:
     title: 'Dominos'
-    url: "hhtps://www.dominos.com"
+    url: "https://www.dominos.com"
     
 #Customization
 group:
