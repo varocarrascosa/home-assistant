@@ -121,8 +121,8 @@
     platform: state
     entity_id: input_slider.volume_outside
   action:
-    - service: media.player.volume_set
-      data_template:
-        entity_id: media_player.outside
-        volume_level: '{{ trigger.to_state.state | float }}'
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.outside
+      volume_level: '{{ trigger.to_state.state | float }}'
         
