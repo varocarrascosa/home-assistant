@@ -185,6 +185,7 @@ group:
     view: yes
     entities:
       - media_player.alvaros
+      - media_player.outside
   MorningInfo:
     entities:
       - sensor.eta_homeschool
