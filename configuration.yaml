@@ -105,8 +105,9 @@ notify:
 #Media
 media_player:
   - platform: sonos
-    - hosts: 10.0.0.31
-    - hosts: 10.0.0.208
+    hosts: 
+      - 10.0.0.31
+      - 10.0.0.208
 
 # Cameras Security
 camera:
