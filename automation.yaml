@@ -6,10 +6,6 @@
     from: 'not_home'
     to: 'home'
   action:
-    - service: group.set_visibility
-      entity_id: group.MorningInfo
-      data:
-        visible: True
     - service: notify.homeassistant
       data:
         title: "Alvaro is home"
@@ -24,10 +20,6 @@
   action:
     - service: light.turn_off
       entity_id: group.all_lights
-    - service: group.set_visibility
-      entity_id: group.MorningInfo
-      data:
-        visible: False
     - service: notify.homeassistant
       data:
         title: "Alvaro just left home"
