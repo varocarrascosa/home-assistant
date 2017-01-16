@@ -17,9 +17,6 @@ homeassistant:
     sensor.eta_homeschool:
       friendly_name: Home to School
       icon: mdi:timer-sand
-    group.MorningInfo:
-      friendly_name: Driving
-      order: '2'
     group.alvaro_lights:
       friendly_name: Lights
       order: '1'
@@ -32,6 +29,8 @@ homeassistant:
       control: hidden
     group.volume_control:
       friendly_name: Media Control
+    group.cars:
+      friendly_name: 'Vehicles'
     script.night_music:
       icon: mdi:music-circle
     script.say:
@@ -182,7 +181,6 @@ group:
       - device_tracker.rodrigo_rodrigo
       - group.alvaro_lights
       - group.all_scripts
-      - group.MorningInfo
       - group.alarm_clock
       - group.cars
       - group.volume_control
@@ -195,15 +193,13 @@ group:
     entities:
       - media_player.alvaros
       - media_player.outside
-  MorningInfo:
-    entities:
-      - sensor.eta_homeschool
   alvaro_lights:
     icon: mdi:light
     entities:
       light.back_room_light
   cars:
     entities:
+      - group.MorningInfo
       - device_tracker.beacon_varocar
   alarm_clock:
     icon: mdi:alarm
@@ -216,6 +212,9 @@ group:
     entities:
       - input_slider.volume_outside
       - input_slider.volume_alvaros
+  MorningInfo:
+    entities:
+      - sensor.eta_homeschool
  
 #Wink
 wink:
