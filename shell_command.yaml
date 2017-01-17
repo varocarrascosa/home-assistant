@@ -1,3 +1,6 @@
 get_latest_config: bash /home/homeassistant/.homeassistant/cmds/pullconfig.sh
+
 order_dominos: bash /home/homeassistant/.homeassistant/cmds/dominos.sh
-notifytest: bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "dominos" "test"
+
+#To notify through twitter
+#bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "Username" "Message"
