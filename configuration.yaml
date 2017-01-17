@@ -29,8 +29,6 @@ homeassistant:
       control: hidden
     group.volume_control:
       friendly_name: Media Control
-    group.cars:
-      friendly_name: 'Vehicles'
     script.night_music:
       icon: mdi:music-circle
     script.say:
