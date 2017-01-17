@@ -23,9 +23,8 @@ homeassistant:
     group.alarm_clock:
       friendly_name: Alarm Clock
       control: hidden
-    group.all_scripts:
-      friendly_name: Commands
-      hidden: false
+    group.scripts:
+      friendly_name: Options
       control: hidden
     group.volume_control:
       friendly_name: Media Control

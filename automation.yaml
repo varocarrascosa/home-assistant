@@ -129,7 +129,7 @@
     - service: media_player.volume_set
       data:
         entity_id: media_player.alvaros
-        volume_level: .4
+        volume_level: .5
 - alias: 'Stop Alarm'
   trigger:
     platform: state
