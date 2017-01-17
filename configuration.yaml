@@ -77,7 +77,7 @@ sensor:
   - platform: yr
   
   - platform: google_travel_time
-    api_key: AIzaSyCzCLAODj0XpjXyT8tKBr2Q9_EvVOSukJI
+    api_key: !secret google_travel_api_key
     origin: 1040 Mariner Dr Key Biscayne
     destination: 6575 N Kendall Dr Pinecrest
     name: 'ETA Home-School'
@@ -104,7 +104,7 @@ input_slider: !include sliders.yaml
 notify:
   - name: HomeAssistant
     platform: pushbullet
-    api_key: o.BztWEwiqEoUY1kIjpN3gV5p3P4JnJBZL
+    api_key: !secret pushbullet_api_key
 
 #Media
 media_player:
