@@ -1,2 +1,2 @@
 #!/bin/bash
-/home/tweet.sh/tweet.sh dm "@\$1" $2
+/home/tweet.sh/tweet.sh dm "@$1" $2
