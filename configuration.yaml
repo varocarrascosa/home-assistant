@@ -17,6 +17,9 @@ homeassistant:
     sensor.eta_homeschool:
       friendly_name: Home to School
       icon: mdi:timer-sand
+    group.Surveillance:
+      friendly_name: ''
+      icon: mdi:security
     group.alvaro_lights:
       friendly_name: Lights
       order: '1'
