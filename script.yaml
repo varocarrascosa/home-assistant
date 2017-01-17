@@ -55,8 +55,3 @@ dominos:
       data:
         title: "A medium pizza was been ordered"
         message: "A Pizza has been ordered successfully to Home"
-
-test:
-  alias: 'Test'
-  sequence:
-    - service: shell_command.test

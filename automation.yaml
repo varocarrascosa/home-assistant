@@ -10,7 +10,6 @@
       data:
         title: "Alvaro is home"
         message: "Alvaro has just arrived home"
- 
 - alias: 'Leaving (Alvaro)'
   trigger:
     platform: state
@@ -46,8 +45,8 @@
       data:
         title: "Rodrigo just left home"
         message: "Rodrigo has just left home"
-        
-        
+
+
 
 #Media
 - alias: 'Media Refresh (Outside)'
@@ -60,7 +59,7 @@
       entity_id: input_slider.volume_outside
       value: '{{ states.media_player.outside.attributes.volume_level }}'
 - alias: 'Volume Outside'
-  trigger: 
+  trigger:
     platform: state
     entity_id: input_slider.volume_outside
   action:
@@ -78,7 +77,7 @@
       entity_id: input_slider.volume_alvaros
       value: '{{ states.media_player.alvaros.attributes.volume_level }}'
 - alias: 'Volume Inside'
-  trigger: 
+  trigger:
     platform: state
     entity_id: input_slider.volume_alvaros
   action:
@@ -86,7 +85,7 @@
     data_template:
       entity_id: media_player.alvaros
       volume_level: '{{ trigger.to_state.state | float }}'
-      
+
 
 #Night turn off
 - alias: 'Turn off everything'
@@ -102,15 +101,15 @@
       entity_id: group.all_lights
     - service: media_player.media_pause
       entity_id: media_player.alvaros
-      
-      
+
+
 
 #Alarm
 - alias: 'Alarm Clock'
   trigger:
     platform: time
     minutes: '/5'
-  condition: 
+  condition:
     condition: and
     conditions:
       - condition: template
@@ -140,9 +139,27 @@
     data:
       entity_id: media_player.alvaros
 
+#Notify Weekdays Ashlee
+- alias: 'Notify on leaving'
+  trigger:
+    platform: state
+    entity_id: device_tracker.alvaro_alvaro
+    from: 'home'
+    to: 'not_home'
+  condition:
+    condition: time
+    after: '04:00:00'
+    before: '09:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: shell_command.notify_weekdaysleave
 
-
-#Script Stop
+#Script MusicNight Stop
 - alias: 'Stop Music Night'
   trigger:
     platform: state
@@ -152,5 +169,3 @@
     service: media_player.media_pause
     data:
       entity_id: media_player.alvaros
-
-
