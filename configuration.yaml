@@ -10,7 +10,7 @@ homeassistant:
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
-  
+
   customize:
     light.back_room_light:
       friendly_name: Back Room Light
@@ -20,6 +20,9 @@ homeassistant:
     group.Surveillance:
       friendly_name: ''
       icon: mdi:security
+    group.Media:
+      friendly_name: ''
+      icon: mdi:library-music
     group.alvaro_lights:
       friendly_name: Lights
       order: '1'
@@ -44,8 +47,8 @@ homeassistant:
       entity_picture: https://mybluerobot.com/wp-content/plugins/svg-avatars-generator/data/temp-avatars/svgA21230366034433246.png
     device_tracker.rodrigo_rodrigo:
       entity_picture: https://mybluerobot.com/wp-content/plugins/svg-avatars-generator/data/temp-avatars/svgA026911773076625956.png
-      
-     
+
+
 # Show links to resources in log and frontend
 #introduction:
 
@@ -79,7 +82,7 @@ sun:
 # Weather Prediction
 sensor:
   - platform: yr
-  
+
   - platform: google_travel_time
     api_key: !secret google_travel_api_key
     origin: 1040 Mariner Dr Key Biscayne
@@ -116,7 +119,7 @@ notify:
 #Media
 media_player:
   - platform: sonos
-    hosts: 
+    hosts:
       - 10.0.0.31
       - 10.0.0.208
 
@@ -124,7 +127,7 @@ media_player:
 camera:
   - platform: foscam
     ip: 10.0.0.177
-    username: cam1    
+    username: cam1
     password: !secret cam1_pass
     port: 88
 
@@ -176,8 +179,8 @@ zone:
     longitude: -80.307822
     radius: 150
     icon: mdi:home
-    
- 
+
+
 #Wink
 wink:
   access_token: !secret wink_access_token

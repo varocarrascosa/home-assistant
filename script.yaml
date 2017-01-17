@@ -4,7 +4,7 @@ update_config:
     - service: shell_command.get_latest_config
     - delay: 00:00:05
     - service: homeassistant.restart
-    
+
 say:
   alias: SONOS TTS
   sequence:
@@ -46,7 +46,7 @@ night_music:
     - service: media_player.media_pause
       data:
         entity_id: media_player.alvaros
-        
+
 dominos:
   alias: 'Dominos Order'
   sequence:
@@ -55,3 +55,8 @@ dominos:
       data:
         title: "A medium pizza was been ordered"
         message: "A Pizza has been ordered successfully to Home"
+
+notifytest:
+  alias: 'Test'
+  sequence:
+    - service: shell_command.notifytest
