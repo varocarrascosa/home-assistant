@@ -26,6 +26,7 @@ scripts:
     - script.night_music
     - script.dominos
     - script.update_config
+    - script.test
 cars:
   entities:
     - sensor.eta_homeschool
