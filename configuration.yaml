@@ -56,10 +56,9 @@ homeassistant:
 frontend:
 
 http:
-  # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
-  # Uncomment this if you are using SSL or running in Docker etc
-  #base_url: hass-ac.duckdns.org:8123
+  api_password: varoCARR98
+  ssl_certificate: '/etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem'
+  ssl_key: '/etc/letsencrypt/live/hass-ac.duckdns.org/privkey.pem'
 
 # Checks for available updates
 updater:
