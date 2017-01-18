@@ -56,9 +56,8 @@ homeassistant:
 frontend:
 
 http:
-  api_password: varoCARR98
-  ssl_certificate: '/etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem'
-  ssl_key: '/etc/letsencrypt/live/hass-ac.duckdns.org/privkey.pem'
+  ssl_certificate: /etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/hass-ac.duckdns.org/privkey.pem
 
 # Checks for available updates
 updater:
