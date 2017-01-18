@@ -12,7 +12,7 @@ homeassistant:
   time_zone: America/New_York
 
   customize:
-    light.back_room_light:
+    light.bathroom:
       friendly_name: Back Room Light
     sensor.eta_homeschool:
       friendly_name: Home to School
@@ -56,9 +56,9 @@ homeassistant:
 frontend:
 
 http:
-  #ssl_certificate: /etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem
-  #ssl_key: /etc/letsencrypt/live/hass-ac.duckdns.org/privkey.pem
-  #server_port: 443
+  ssl_certificate: /home/homeassistant/.homeassistant/fullchain.pem
+  ssl_key: /home/homeassistant/.homeassistant/privkey.pem
+
 # Checks for available updates
 updater:
 
@@ -182,3 +182,26 @@ zone:
 #Wink
 wink:
   access_token: !secret wink_access_token
+
+#Alexa
+alexa:
+  intents:
+    LocateIntent:
+      action:
+        service: notify.homeassistant
+        data_template:
+          message: The location of {{ User }} has been queried via Alexa.
+      speech:
+        type: plaintext
+        text: >
+          {%- for state in states.device_tracker -%}
+            {%- if state.name.lower() == User.lower() -%}
+              {{ state.name }} is at {{ state.state }}
+            {%- endif -%}
+          {%- else -%}
+            I am sorry, I do not know where {{ User }} is.
+          {%- endfor -%}
+      card:
+        type: simple
+        title: Sample title
+        content: Some more content
