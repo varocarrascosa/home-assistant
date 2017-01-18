@@ -56,9 +56,9 @@ homeassistant:
 frontend:
 
 http:
-  "ssl_certificate: /etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem
+  ssl_certificate: /etc/letsencrypt/live/hass-ac.duckdns.org/fullchain.pem
   ssl_key: /etc/letsencrypt/live/hass-ac.duckdns.org/privkey.pem
-  server_port: 443"
+  server_port: 443
 # Checks for available updates
 updater:
 
