@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mkdir /home/homeassistant/.homeassistant/temp
 cd /home/homeassistant/.homeassistant/temp/
 git clone https://github.com/varocarrascosa/home-assistant.git
