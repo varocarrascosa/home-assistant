@@ -200,6 +200,7 @@ alexa:
                 {{ state.name}} is away
               {%- else -%}
                 {{ state.name }} is at {{ state.state }}
+              {%- endif -%}
             {%- endif -%}
           {%- else -%}
             I am sorry, I do not know where {{ User }} is.
