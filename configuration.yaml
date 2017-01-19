@@ -225,3 +225,11 @@ alexa:
       speech:
         type: plaintext
         text: !include alexa_confirmation.yaml
+    RunScriptIntent:
+      action:
+        service: script.turn_on
+        data_template:
+          entity_id: script.{{ Script | replace(" ", "_") }}
+      speech:
+        type: plaintext
+        text: !include alexa_confirmation.yaml
