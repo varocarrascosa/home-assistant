@@ -213,10 +213,4 @@ alexa:
       speech:
         type: plaintext
         text: >
-          {%- for state in states.device_tracker -%}
-            {%- if state.name.lower() == vehicle.lower() -%}
-              {{ state.name }} is at {{ state.state }}
-            {%- endif -%}
-          {%- else -%}
-            I am sorry, I do not know where {{ vehicle }} is.
-          {%- endfor -%}
+          The C63 is at {{ states.device_tracker.beacon_varocar.state }}
