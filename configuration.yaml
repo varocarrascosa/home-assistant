@@ -196,7 +196,10 @@ alexa:
         text: >
           {%- for state in states.device_tracker -%}
             {%- if state.name.lower() == User.lower() -%}
-              {{ state.name }} is at {{ state.state }}
+              {%- if state.state == "not_home" -%}
+                {{ state.name}} is away
+              {%- else -%}
+                {{ state.name }} is at {{ state.state }}
             {%- endif -%}
           {%- else -%}
             I am sorry, I do not know where {{ User }} is.
