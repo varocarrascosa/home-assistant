@@ -224,4 +224,4 @@ alexa:
         entity_id: input_boolean.alarm_clock
       speech:
         type: plaintext
-        text: !include alexa_confirmation.yaml
+        text: !include /alexa/alexa_confirmation.yaml
