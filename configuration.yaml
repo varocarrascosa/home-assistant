@@ -205,10 +205,6 @@ alexa:
           {%- else -%}
             I am sorry, I do not know where {{ User }} is.
           {%- endfor -%}
-      card:
-        type: simple
-        title: Sample title
-        content: Some more content
     VehicleIntent:
       action:
         service: notify.homeassistant
@@ -217,4 +213,15 @@ alexa:
       speech:
         type: plaintext
         text: >
-          The C63 is at {{ states.device_tracker.beacon_varocar.state }}
+          {%- if state.device_tracker.beacon_varocar.state == "not_home" -%}
+            The C63 is not home
+          {%- else -%}
+            The C63 is at {{ states.device_tracker.beacon_varocar.state }}
+          {%- endif -%}
+    AlarmIntend:
+      action:
+        service: input_boolean.turn_on
+        entity_id: input_boolean.alarm_clock
+      speech:
+        type: plaintext
+        text: !include /alexa/alexa_confirmation.yaml
