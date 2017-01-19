@@ -205,3 +205,18 @@ alexa:
         type: simple
         title: Sample title
         content: Some more content
+    VehicleIntent:
+      action:
+        service: notify.homeassistant
+        data_template:
+          message: The location of {{ vehicle }} has been queried via Alexa.
+      speech:
+        type: plaintext
+        text: >
+          {%- for state in states.device_tracker -%}
+            {%- if state.name.lower() == vehicle.lower() -%}
+              {{ state.name }} is at {{ state.state }}
+            {%- endif -%}
+          {%- else -%}
+            I am sorry, I do not know where {{ vehicle }} is.
+          {%- endfor -%}
