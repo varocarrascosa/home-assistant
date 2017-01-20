@@ -3,10 +3,10 @@ VolumeUpIntent:
     service: media_player.volume_set
     data_template:
       entity_id: media_player.alvaros
-      volume_level: {{ states.media_player.alvaros.attributes.volume_level + .2 }}
+      volume_level: {{ states.media_player.alvaros.attributes.volume_level | float - .2 }}
 VolumeDownIntent:
   action:
     service: media_player.volume_set
     data_template:
       entity_id: media_player.alvaros
-      volume_level: {{ states.media_player.alvaros.attributes.volume_level - .2 }}
+      volume_level: {{ states.media_player.alvaros.attributes.volume_level | float - .2 }}
