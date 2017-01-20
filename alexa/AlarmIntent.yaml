@@ -2,6 +2,9 @@ AlarmIntent:
   action:
     - service: input_boolean.turn_on
       entity_id: input_boolean.alarm_clock
+    - service: notify.homeassistant
+      data_template:
+        message: {{ Alarmtime }}
     - service: input_select.select_option
       data_template:
         entity_id: input_select.alarm_clock
