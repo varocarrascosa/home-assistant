@@ -22,7 +22,7 @@ frontend:
 http:
   ssl_certificate: /home/homeassistant/.homeassistant/fullchain.pem
   ssl_key: /home/homeassistant/.homeassistant/privkey.pem
-  base_url: https://hass-ac.duckdns.org
+  base_url: hass-ac.duckdns.org
 
 # Checks for available updates
 updater:
