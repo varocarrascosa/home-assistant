@@ -6,16 +6,20 @@ AlarmIntent:
       data_template:
         message: The {{ Alarmtime }} has been set
     - service: input_select.select_option
-      data:
+      data_template:
         entity_id: input_select.alarm_clock
         option: >
-          {%- for state in states.input_select -%}
-            {%- if state.name == Alarmtime -%}
-              state
-            {%- endif -%}
-          {%- endfor -%}
-
-
+          {%- if Alarmtime == "06:00" -%}
+            06:00
+          {%- elif Alarmtime == "05:50" -%}
+            05:50
+          {%- elif Alarmtime == "05:45" -%}
+            05:45
+          {%- elif Alarmtime == "06:10" -%}
+            06:10
+          {%- elif Alarmtime == "06:15" -%}
+            06:15
+          {%- endif -%}
   speech:
     type: plaintext
     text: !include alexa_confirm.yaml
