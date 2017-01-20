@@ -8,11 +8,7 @@ AlarmIntent:
     - service: input_select.select_option
       data_template:
         entity_id: input_select.alarm_clock
-        option: >
-          {% if Alarmtime == "06:00" %}
-            06:00
-          {% endif %}
-
+        option: {{ Alarmtime }}
   speech:
     type: plaintext
     text: !include alexa_confirm.yaml
