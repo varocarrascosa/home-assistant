@@ -1,6 +1,5 @@
           >
           {{ [
-          "Okay",
           "Sure",
           "If you insist",
           "Done",
@@ -10,6 +9,5 @@
           "As you wish",
           "Understood",
           "Got it",
-          "No Problem",
-          "Couldnt do it.         Sike, done"
+          "No Problem"
           ] | random }}

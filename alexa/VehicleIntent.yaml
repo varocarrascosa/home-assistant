@@ -1,0 +1,13 @@
+VehicleIntent:
+    action:
+      service: notify.homeassistant
+      data_template:
+        message: The location of {{ vehicle }} has been queried via Alexa.
+    speech:
+      type: plaintext
+      text: >
+        {%- if state.device_tracker.beacon_varocar.state == "not_home" -%}
+          The C63 is not home
+        {%- else -%}
+          The C63 is at {{ states.device_tracker.beacon_varocar.state }}
+        {%- endif -%}

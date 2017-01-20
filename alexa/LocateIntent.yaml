@@ -1,0 +1,19 @@
+LocateIntent:
+  action:
+    service: notify.homeassistant
+    data_template:
+      message: The location of {{ User }} has been queried via Alexa.
+  speech:
+    type: plaintext
+    text: >
+      {%- for state in states.device_tracker -%}
+        {%- if state.name.lower() == User.lower() -%}
+          {%- if state.state == "not_home" -%}
+            {{ state.name}} is away
+          {%- else -%}
+            {{ state.name }} is at {{ state.state }}
+          {%- endif -%}
+        {%- endif -%}
+      {%- else -%}
+        I am sorry, I do not know where {{ User }} is.
+      {%- endfor -%}
