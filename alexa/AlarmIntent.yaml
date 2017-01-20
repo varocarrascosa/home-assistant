@@ -6,12 +6,9 @@ AlarmIntent:
       data_template:
         message: The {{ Alarmtime }} has been set
     - service: input_select.select_option
-      data_template:
+      data:
         entity_id: input_select.alarm_clock
-        option: >
-          {% if Alarmtime == "06:00" %}
-            06:00
-         {% endif %}
+        option: 06:00
 
   speech:
     type: plaintext
