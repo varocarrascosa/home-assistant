@@ -5,7 +5,7 @@ AlarmIntent:
     - service: input_select.select_option
       data_template:
         entity_id: input_select.alarm_clock
-        option: strptime(Alarmtime, "HH,MM")
+        option: strptime(Alarmtime, "%H%H,%M%M")
   speech:
     type: plaintext
     text: !include alexa_confirm.yaml
