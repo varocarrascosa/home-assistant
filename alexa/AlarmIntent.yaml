@@ -8,7 +8,13 @@ AlarmIntent:
     - service: input_select.select_option
       data:
         entity_id: input_select.alarm_clock
-        option: 06:00
+        option: >
+          {%- for state in states.input_select -%}
+            {%- if state.name == Alarmtime -%}
+              state
+            {%- endif -%}
+          {%- endfor -%}
+
 
   speech:
     type: plaintext
