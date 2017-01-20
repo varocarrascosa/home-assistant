@@ -5,13 +5,13 @@ AlarmIntent:
     - service: notify.homeassistant
       data_template:
         message: The {{ Alarmtime }} has been set
-    #- service: input_select.select_option
-      #data_template:
-        #entity_id: input_select.alarm_clock
-      #  option: >
-        # {% if Alarmtime == "06:00" %}
-            #06:00
-          # {% endif %}
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.alarm_clock
+        option: >
+          {% if Alarmtime == "06:00" %}
+            06:00
+          {% endif %}
 
   speech:
     type: plaintext
