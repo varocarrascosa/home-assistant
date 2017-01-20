@@ -7,7 +7,7 @@ AlarmIntent:
         entity_id: input_select.alarm_clock
         option: >
           {%- if Alarmtime == "06:00" -%}
-            "06:00"
+            06:00
           {%- endif -%}
 
   speech:
