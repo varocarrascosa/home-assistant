@@ -86,4 +86,4 @@ lower_music:
     - service: media_player.volume_set
       data_template:
         entity_id: media_player.alvaros
-        volume_set: {{ state.media_player.alvaros.attributes.volume_level }} - .2
+        volume_set: {{ state.media_player.attributes.volume_level }} - .2
