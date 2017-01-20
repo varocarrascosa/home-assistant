@@ -27,10 +27,10 @@ night_music:
         entity_id: media_player.alvaros
         volume_level: .4
     - service: tts.google_say
-      entity_id: media_player.alvaros
       data:
+        entity_id: media_player.alvaros
         message: 'Goodnight Alvaro, I will play some music for a little'
-    - delay: 00:00:03
+    - delay: 00:00:05
     - service: light.turn_off
       data:
         entity_id: group.all_lights
