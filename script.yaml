@@ -55,3 +55,27 @@ dominos:
       data:
         title: "A medium pizza was been ordered"
         message: "A Pizza has been ordered successfully to Home"
+
+#Alexa Specific
+spanish_rap:
+  alias: 'Spanish Rap'
+  sequence:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.alvaros
+        source: 'Arce Radio'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.alvaros
+        volume_level: .4
+rap:
+  alias: 'Rap'
+  sequence:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.alvaros
+        source: 'Hot Hip Hop'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.alvaros
+        volume_level: .4
