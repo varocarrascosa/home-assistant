@@ -30,7 +30,7 @@ night_music:
       data:
         entity_id: media_player.alvaros
         message: 'Goodnight Alvaro, I will play some music for a little'
-    - delay: 00:00:05
+    - delay: 00:00:03
     - service: light.turn_off
       data:
         entity_id: group.all_lights
