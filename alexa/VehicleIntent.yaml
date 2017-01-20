@@ -6,8 +6,8 @@ VehicleIntent:
     speech:
       type: plaintext
       text: >
-        {%- if state.device_tracker.beacon_varocar.state == "not_home" -%}
+        {%- if states('device_tracker.beacon_varocar') == "not_home" -%}
           The C63 is not home
         {%- else -%}
-          The C63 is at {{ states.device_tracker.beacon_varocar.state }}
+          The C63 is at {{ states('device_tracker.beacon_varocar') }}
         {%- endif -%}
