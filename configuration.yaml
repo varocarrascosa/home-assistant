@@ -53,8 +53,7 @@ sensor:
     name: 'ETA Home-School'
 # Text to speech
 tts:
-  platform: voicerss
-  api_key: 'f849df9f45aa44b190b6b4a53efa0c87'
+  platform: google
 
 #Automations
 automation: !include automation.yaml
