@@ -11,7 +11,7 @@ say:
     - service: media_player.sonos_snapshot
       data_template:
         entity_id: "{{ where }}"
-    - service: tts.google_say
+    - service: tts.voicerss
       data_template:
         entity_id: "{{ where }}"
         message: "{{ what }}"
@@ -26,7 +26,7 @@ night_music:
       data:
         entity_id: media_player.alvaros
         volume_level: .4
-    - service: tts.google_say
+    - service: tts.voicerss
       data:
         entity_id: media_player.alvaros
         message: 'Goodnight Alvaro, I will play some music for a little'
