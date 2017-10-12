@@ -20,8 +20,8 @@ homeassistant:
 #frontend:
 
 http:
-  ssl_certificate: ~/.homeassistant/fullchain.pem
-  ssl_key: ~/.homeassistant/privkey.pem
+  ssl_certificate: '~/.homeassistant/fullchain.pem'
+  ssl_key: '~/.homeassistant/privkey.pem'
 
 # Checks for available updates
 updater:
