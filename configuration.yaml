@@ -20,8 +20,8 @@ homeassistant:
 #frontend:
 
 http:
-  ssl_certificate: /etc/letsencrypt/hass-ac.duckdns.org/fullchain.pem
-  ssl_key: /etc/letsencrypt/hass-ac.duckdns.org/privkey.pem
+  ssl_certificate: ~/.homeassistant/fullchain.pem
+  ssl_key: ~/.homeassistant/privkey.pem
 
 # Checks for available updates
 updater:
