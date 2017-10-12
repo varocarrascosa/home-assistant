@@ -22,7 +22,6 @@ homeassistant:
 http:
   ssl_certificate: /etc/letsencrypt/hass-ac.duckdns.org/fullchain.pem
   ssl_key: /etc/letsencrypt/hass-ac.duckdns.org/privkey.pem
-  base_url: hass-ac.duckdns.org
 
 # Checks for available updates
 updater:
