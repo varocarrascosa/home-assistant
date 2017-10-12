@@ -11,17 +11,17 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
 
-  customize: !include customize.yaml
+  #customize: !include customize.yaml
 
 # Show links to resources in log and frontend
 #introduction:
 
 # Enables the frontend
-frontend:
+#frontend:
 
 http:
-  ssl_certificate: /home/homeassistant/.homeassistant/fullchain.pem
-  ssl_key: /home/homeassistant/.homeassistant/privkey.pem
+  ssl_certificate: /etc/letsencrypt/hass-ac.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/hass-ac.duckdns.org/privkey.pem
   base_url: hass-ac.duckdns.org
 
 # Checks for available updates
@@ -56,22 +56,22 @@ tts:
   platform: google
 
 #Automations
-automation: !include automation.yaml
+#automation: !include automation.yaml
 
 #Scripts
-script: !include script.yaml
+#script: !include script.yaml
 
 #Inputs
-input_select: !include selects.yaml
+#input_select: !include selects.yaml
 
 #Booleans
-input_boolean: !include booleans.yaml
+#input_boolean: !include booleans.yaml
 
 #Sliders
-input_slider: !include sliders.yaml
+#input_slider: !include sliders.yaml
 
 #Groups
-group: !include groups.yaml
+#group: !include groups.yaml
 
 #Notifications
 notify:
@@ -134,5 +134,5 @@ zone:
   #access_token: !secret wink_access_token
 
 #Alexa
-alexa:
-  intents: !include_dir_merge_named alexa
+#alexa:
+  #intents: !include_dir_merge_named alexa
