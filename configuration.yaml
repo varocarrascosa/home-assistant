@@ -2,10 +2,10 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 25.683539
-  longitude: -80.166588
+  latitude: 42.369948
+  longitude: -71.073110
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 2
+  elevation: 2.7
   # metric for Metric, imperial for Imperial
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -48,8 +48,8 @@ sensor:
 
   - platform: google_travel_time
     api_key: !secret google_travel_api_key
-    origin: 1040 Mariner Dr Key Biscayne
-    destination: 6575 N Kendall Dr Pinecrest
+    origin: 1 Leighton St Cambridge
+    destination: 675 Commonwealth St Brookline
     name: 'ETA Home-School'
 # Text to speech
 tts:
@@ -78,22 +78,7 @@ notify:
   - name: HomeAssistant
     platform: pushbullet
     api_key: !secret pushbullet_api_key
-
-#Media
-media_player:
-  - platform: sonos
-    hosts:
-      - 10.0.0.31
-      - 10.0.0.208
-
-# Cameras Security
-camera:
-  - platform: foscam
-    ip: 10.0.0.177
-    username: cam1
-    password: !secret cam1_pass
-    port: 88
-
+    
 #Shell commands
 shell_command: !include shell_command.yaml
 
@@ -145,8 +130,8 @@ zone:
 
 
 #Wink
-wink:
-  access_token: !secret wink_access_token
+#wink:
+  #access_token: !secret wink_access_token
 
 #Alexa
 alexa:
