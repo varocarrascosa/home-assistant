@@ -20,7 +20,7 @@ homeassistant:
 #frontend:
 
 http:
-  api_password: 802hass
+  api_password: "802hass"
   ssl_certificate: /etc/ssl/certs/fullchain.pem
   ssl_key: /etc/ssl/certs/privkey.pem
   base_url: hass-ac.duckdns.org:8123
