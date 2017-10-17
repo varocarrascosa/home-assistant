@@ -74,32 +74,32 @@ tts:
 #group: !include groups.yaml
 
 #Notifications
-notify:
-  - name: HomeAssistant
-    platform: pushbullet
-    api_key: !secret pushbullet_api_key
+#notify:
+ # - name: HomeAssistant
+    #platform: pushbullet
+    #api_key: !secret pushbullet_api_key
     
 #Shell commands
 shell_command: !include shell_command.yaml
 
 #MQTT
-mqtt:
-  broker: m13.cloudmqtt.com
-  port: 10944
-  client_id: homeassistant
-  keepalive: 60
-  username: !secret broker_user
-  password: !secret broker_pass
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-    qos: 1
-    retain: true
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
-    qos: 1
-    retain: true
+#mqtt:
+  #broker: m13.cloudmqtt.com
+  #port: 10944
+  #client_id: homeassistant
+  #keepalive: 60
+  #username: !secret broker_user
+  #password: !secret broker_pass
+  #birth_message:
+  #  topic: 'hass/status'
+  #  payload: 'online'
+  #  qos: 1
+  #  retain: true
+  #will_message:
+  #  topic: 'hass/status'
+   # payload: 'offline'
+   # qos: 1
+   # retain: true
 #Trackin
 device_tracker:
   - platform: owntracks
