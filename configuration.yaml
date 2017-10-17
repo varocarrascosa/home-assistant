@@ -46,11 +46,11 @@ sun:
 sensor:
   - platform: yr
 
-  - platform: google_travel_time
-    api_key: !secret google_travel_api_key
-    origin: 1 Leighton St Cambridge
-    destination: 675 Commonwealth St Brookline
-    name: 'ETA Home-School'
+  #- platform: google_travel_time
+    #api_key: !secret google_travel_api_key
+    #origin: 1 Leighton St Cambridge
+    #destination: 675 Commonwealth St Brookline
+    #name: 'ETA Home-School'
 # Text to speech
 tts:
   platform: google
