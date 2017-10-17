@@ -78,7 +78,7 @@ tts:
  # - name: HomeAssistant
     #platform: pushbullet
     #api_key: !secret pushbullet_api_key
-    
+
 #Shell commands
 shell_command: !include shell_command.yaml
 
@@ -111,21 +111,6 @@ zone:
     latitude: 25.683539
     longitude: -80.166588
     radius: 100
-    icon: mdi:home
-  - name: "G Prep"
-    latitude: 25.689507
-    longitude: -80.299706
-    radius: 400
-    icon: mdi:school
-  - name: "Miller"
-    latitude: 25.716813
-    longitude: -80.325366
-    radius: 200
-    icon: mdi:school
-  - name: "Ashlee"
-    latitude: 25.719046
-    longitude: -80.307822
-    radius: 150
     icon: mdi:home
 
 
