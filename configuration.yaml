@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 42.369948
-  longitude: -71.073110
+  latitude: 42.370126
+  longitude: -71.078153
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 2.7
   # metric for Metric, imperial for Imperial
@@ -20,9 +20,8 @@ homeassistant:
 #frontend:
 
 http:
-  api_password: "802hass"
-  ssl_certificate: /etc/ssl/certs/fullchain.pem
-  ssl_key: /etc/ssl/certs/privkey.pem
+  ssl_certificate: /home/homeassistant/.homeassistant/fullchain1.pem
+  ssl_key: /home/homeassistant/.homeassistant/privkey1.pem
   base_url: hass-ac.duckdns.org:8123
 
 # Checks for available updates
@@ -47,11 +46,11 @@ sun:
 sensor:
   - platform: yr
 
-  #- platform: google_travel_time
-    #api_key: !secret google_travel_api_key
-    #origin: 1 Leighton St Cambridge
-    #destination: 675 Commonwealth St Brookline
-    #name: 'ETA Home-School'
+  - platform: google_travel_time
+    api_key: AIzaSyC_qJ81D5L7d6k5MPVWB3YGNlImBzscED4
+    origin: 1 Leighton St Cambridge
+    destination: 675 Commonwealth St Brookline
+    name: 'ETA Home-School'
 # Text to speech
 tts:
   platform: google
@@ -101,18 +100,6 @@ shell_command: !include shell_command.yaml
    # payload: 'offline'
    # qos: 1
    # retain: true
-#Trackin
-device_tracker:
-  - platform: owntracks
-    waypoints: True
-    max_gps_accuracy: 1500
-
-zone:
-  - name: Home
-    latitude: 25.683539
-    longitude: -80.166588
-    radius: 100
-    icon: mdi:home
 
 
 #Wink
