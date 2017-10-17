@@ -51,6 +51,11 @@ sensor:
     origin: 1 Leighton St Cambridge
     destination: 675 Commonwealth St Brookline
     name: 'ETA Home-School'
+
+  - platform: uber
+    server_token: keSesSEqKCxZndb-IVOfJWy_rWfiq5fBq4-zXm-g
+    start_latitude: 42.370113
+    start_longitude: -71.073655
 # Text to speech
 tts:
   platform: google
