@@ -8,14 +8,14 @@ update_config:
 say:
   alias: SONOS TTS
   sequence:
-    - service: media_player.sonos_snapshot
+    - service: media_player.varos_room_speaker
       data_template:
         entity_id: "{{ where }}"
     - service: tts.google_say
       data_template:
         entity_id: "{{ where }}"
         message: "{{ what }}"
-    - service: media_player.sonos_restore
+    - service: media_player.varos_room_speaker
       data_template:
         entity_id: "{{ where }}"
 
