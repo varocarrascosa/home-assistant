@@ -107,7 +107,7 @@ script: !include script.yaml
 #input_slider: !include sliders.yaml
 
 #Groups
-#group: !include groups.yaml
+group: !include groups.yaml
 
 #Notifications
 notify:

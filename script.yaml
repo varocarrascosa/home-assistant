@@ -69,13 +69,11 @@ spanish_rap:
         entity_id: media_player.alvaros
         volume_level: .4
 rap:
-  alias: 'Rap'
+  alias: 'Test Notifications'
   sequence:
-    - service: media_player.select_source
+    - service: notify.ios_alvaro
       data:
-        entity_id: media_player.alvaros
-        source: 'Hot Hip Hop'
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.alvaros
-        volume_level: .4
+        message: "Something happened at home!"
+        data:
+          push:
+            badge: 5
