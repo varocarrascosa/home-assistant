@@ -11,13 +11,11 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
 
-  #customize: !include customize.yaml
+  customize: !include customize.yaml
 
-# Show links to resources in log and frontend
-#introduction:
 
 # Enables the frontend
-#frontend:
+frontend:
 
 http:
   ssl_certificate: /home/homeassistant/.homeassistant/fullchain1.pem
@@ -41,6 +39,20 @@ logbook:
 
 # Track the sun
 sun:
+
+#iOs
+ios:
+  push:
+    categories:
+      - name: Alarm
+        identifier: 'alarm'
+        actions:
+          - identifier: 'SOUND_ALARM'
+            title: 'Sound Alarm'
+            activationMode: 'background'
+            authenticationRequired: no
+            destructive: yes
+            behavior: 'default'
 
 # Weather Prediction
 sensor:
@@ -79,10 +91,10 @@ script: !include script.yaml
 #group: !include groups.yaml
 
 #Notifications
-#notify:
- # - name: HomeAssistant
-    #platform: pushbullet
-    #api_key: !secret pushbullet_api_key
+notify:
+  - platform: ios
+    name: ios_alvaro
+    target: f729c78b-c577-3876-b34f-1fcffc8fb067
 
 #Shell commands
 shell_command: !include shell_command.yaml

@@ -1,35 +1,24 @@
 default_view:
   view: yes
   entities:
-    - device_tracker.alvaro_alvaro
-    - device_tracker.rodrigo_rodrigo
-    - group.alvaro_lights
-    - group.scripts
-    - group.alarm_clock
-    - group.cars
-    - group.volume_control
 Surveillance:
   view: yes
   entities:
-    - camera.foscam_camera
 Media:
   view: yes
   entities:
-    - media_player.alvaros
-    - media_player.outside
 alvaro_lights:
   icon: mdi:light
   entities:
-    - light.bathroom
 scripts:
   entities:
-    - script.night_music
-    - script.dominos
+    #- script.night_music
+    #- script.dominos
     - script.update_config
 cars:
   entities:
     - sensor.eta_homeschool
-    - device_tracker.beacon_varocar
+    #- device_tracker.beacon_varocar
 alarm_clock:
   icon: mdi:alarm
   entities:
@@ -39,5 +28,3 @@ alarm_clock:
 volume_control:
   icon: mdi:music-note-eighth
   entities:
-    - input_slider.volume_outside
-    - input_slider.volume_alvaros
