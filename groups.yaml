@@ -1,6 +1,7 @@
 default_view:
   view: yes
   entities:
+    - group.scripts
 Surveillance:
   view: yes
   entities:
