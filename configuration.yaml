@@ -64,7 +64,7 @@ tts:
 #automation: !include automation.yaml
 
 #Scripts
-#script: !include script.yaml
+script: !include script.yaml
 
 #Inputs
 #input_select: !include selects.yaml
