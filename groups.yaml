@@ -17,7 +17,7 @@ scripts:
     - script.update_config
 cars:
   entities:
-    - sensor.eta_homeschool
+    #- sensor.eta_homeschool
     #- device_tracker.beacon_varocar
 alarm_clock:
   icon: mdi:alarm

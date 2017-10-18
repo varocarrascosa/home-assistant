@@ -62,12 +62,31 @@ sensor:
     api_key: AIzaSyC_qJ81D5L7d6k5MPVWB3YGNlImBzscED4
     origin: 1 Leighton St Cambridge
     destination: 675 Commonwealth St Brookline
-    name: 'ETA Home-School'
+    name: 'ETA Home-BU'
+
+  - platform: google_travel_time
+    api_key: AIzaSyC_qJ81D5L7d6k5MPVWB3YGNlImBzscED4
+    origin: 1 Leighton St Cambridge
+    destination: 415 South St, Waltham, MA 02453
+    name: 'ETA Home-Brandeis'
 
   - platform: uber
     server_token: keSesSEqKCxZndb-IVOfJWy_rWfiq5fBq4-zXm-g
     start_latitude: 42.370113
     start_longitude: -71.073655
+    end_latitude: 42.350504
+    end_longitude: -71.105404
+    product_ids:
+      - '2d1d002b-d4d0-4411-98e1-673b244878b2'
+
+  - platform: uber
+    server_token: keSesSEqKCxZndb-IVOfJWy_rWfiq5fBq4-zXm-g
+    start_latitude: 42.370113
+    start_longitude: -71.073655
+    end_latitude: 42.365045
+    end_longitude: -71.258225
+    product_ids:
+      - '2d1d002b-d4d0-4411-98e1-673b244878b2'
 # Text to speech
 tts:
   platform: google
