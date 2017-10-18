@@ -26,7 +26,7 @@ http:
 updater:
 
 # Discover some devices automatically
-discovery:
+#discoery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
