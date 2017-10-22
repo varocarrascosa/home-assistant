@@ -8,6 +8,7 @@ Surveillance:
 Media:
   view: yes
   entities:
+    - media_player.kitchen
 alvaro_lights:
   icon: mdi:light
   entities:
