@@ -30,6 +30,7 @@ media_player:
   - platform: sonos
     hosts: 10.0.0.144
 
+apiai: !include apiai.yaml
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
@@ -43,18 +44,8 @@ logbook:
 sun:
 
 #iOs
-ios:
-  push:
-    categories:
-      - name: Alarm
-        identifier: 'alarm'
-        actions:
-          - identifier: 'SOUND_ALARM'
-            title: 'Sound Alarm'
-            activationMode: 'background'
-            authenticationRequired: no
-            destructive: yes
-            behavior: 'default'
+ios: !include ios.yaml
+
 
 # Weather Prediction
 sensor:

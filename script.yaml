@@ -8,14 +8,14 @@ update_config:
 say:
   alias: SONOS TTS
   sequence:
-    - service: media_player.kitchen
+    - service: media_player.sonos_snapshot
       data_template:
         entity_id: "{{ where }}"
     - service: tts.google_say
       data_template:
         entity_id: "{{ where }}"
         message: "{{ what }}"
-    - service: media_player.kitchen
+    - service: media_player.sonos_restore
       data_template:
         entity_id: "{{ where }}"
 
@@ -63,17 +63,8 @@ rap:
     - service: media_player.select_source
       data:
         entity_id: media_player.kitchen
-        source: 'Arce Radio'
+        source: 'Migos'
     - service: media_player.volume_set
       data:
         entity_id: media_player.kitchen
         volume_level: .4
-testing:
-  alias: 'Test Notifications'
-  sequence:
-    - service: notify.ios_alvaro
-      data:
-        message: "Something happened at home!"
-        data:
-          push:
-            badge: 5

@@ -24,3 +24,5 @@ script.say:
   hidden: true
 script.dominos:
   icon: mdi:pizza
+zone.home:
+  track_isos: true

@@ -172,3 +172,16 @@
     service: media_player.media_pause
     data:
       entity_id: media_player.alvaros
+
+#ios
+- alias: Notify iOS Birth Control
+  trigger:
+    platform: time
+    at: '18:30:00'
+  action:
+    service: notify.ios_ashlee
+    data:
+      message: "Please take the Birth Control"
+      data:
+        push:
+          badge: 5
