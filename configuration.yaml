@@ -44,7 +44,7 @@ logbook:
 sun:
 
 #iOs
-ios: !include ios.yaml
+#ios: !include ios.yaml
 
 
 # Weather Prediction
@@ -103,10 +103,10 @@ script: !include script.yaml
 group: !include groups.yaml
 
 #Notifications
-notify:
-  - platform: ios
-    name: ios_alvaro
-    target: f729c78b-c577-3876-b34f-1fcffc8fb067
+#notify:
+  #- platform: ios
+    #name: ios_alvaro
+    #target: f729c78b-c577-3876-b34f-1fcffc8fb067
 
 #Shell commands
 shell_command: !include shell_command.yaml
