@@ -30,7 +30,7 @@ media_player:
   - platform: sonos
     hosts: 10.0.0.144
 
-apiai: !include apiai.yaml
+#apiai: !include apiai.yaml
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
