@@ -1,22 +1,4 @@
 intent_script:
-  MusicIntent:
-    speech:
-      text: The temperature at home is {{ states('sensor.home_temp') }} degrees
-    action:
-      - service: script.say
-        data_template:
-          sonos_entity: media_player.kitchen
-          message: 'Adjusting music source'
-      - service_template: >
-          {%- if music_type == "american rap" -%}
-            script.rap
-          {%- else -%}
-            script.spanish_rap
-          {%- endif -%}
-        #data_template:
-          #entity_id: "media_player.{{ Room | replace(' ', '_') }}"
-
-
   LocateIntent:
     speech:
       text: >
