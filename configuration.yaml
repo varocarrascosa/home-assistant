@@ -44,8 +44,11 @@ logbook:
 sun:
 
 #iOs
-#ios: !include ios.yaml
+ios: #!include ios.yaml
 
+#Device Tracker
+device_tracker:
+  - platform: bluetooth_tracker
 
 # Weather Prediction
 sensor:
