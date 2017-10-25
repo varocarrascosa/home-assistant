@@ -72,7 +72,7 @@ tts:
   platform: google
 
 #Automations
-#automation: !include automation.yaml
+automation: !include automation.yaml
 
 #Scripts
 script: !include script.yaml
