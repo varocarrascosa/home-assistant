@@ -71,7 +71,7 @@ sensor:
       alarm_clock_time:
         friendly_name: 'Alarm Time'
         icon_template: 'mdi:alarm'
-        value_template: '{{ "%0.02d:%0.02d" | format(states.input_input_number.alarm_clock_hour.state | int, states.input_number.alarm_clock_minute.state | int ) }}'
+        value_template: '{{ "%0.02d:%0.02d" | format(states.input_number.alarm_clock_hour.state | int, states.input_number.alarm_clock_minute.state | int ) }}'
       alarm_clock_fade_in_minutes:
         friendly_name: 'Fade In (Minutes)'
         icon_template: 'mdi:gradient'
