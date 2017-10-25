@@ -4,7 +4,7 @@ alarm_clock_hour:
   initial: 8
   min: 0
   max: 23
-  step:1
+  step: 1
 alarm_clock_minute:
   name: Hour
   icon: mdi:timer
@@ -18,4 +18,4 @@ alarm_clock_fade_in_minutes:
   initial: 15
   min: 0
   max: 30
-  step:5
+  step: 5
