@@ -119,7 +119,7 @@ shell_command: !include shell_command.yaml
 
 #Wink
 wink:
-  email: !secrets wink_email
+  email: !secrets wink_user
   password: !secrets wink_pass
 #Alexa
 #alexa:
