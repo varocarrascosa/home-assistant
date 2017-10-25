@@ -1,12 +1,21 @@
-volume_outside:
-  name: 'Patio'
+alarm_clock_hour:
+  name: Hour
+  icon: mdi:timer
+  initial: 8
+  min: 0
+  max: 23
+  step:1
+alarm_clock_minute:
+  name: Hour
+  icon: mdi:timer
   initial: 0
   min: 0
-  max: 1
-  step: .05
-volume_alvaros:
-  name: "Alvaro's"
-  initial: 0
+  max: 55
+  step:5
+alarm_clock_fade_in_minutes:
+  name: Fade In (Minutes)
+  icon: mdi:gradient
+  initial: 15
   min: 0
-  max: 1
-  step: .05
+  max: 30
+  step:5

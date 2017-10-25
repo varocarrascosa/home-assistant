@@ -1,8 +1,4 @@
-alarm_clock:
-  name: 'Alarm Clock'
+alarm_clock_status:
+  name: 'Alarm Set'
   initial: off
   icon: mdi:alarm
-lightalarmclock: #Not in use yet
-  name: 'Natural'
-  initial: off
-  icon: mdi:theme-light-dark

@@ -2,6 +2,7 @@ default_view:
   view: yes
   entities:
     - group.scripts
+    - group.alarm_clock
 Surveillance:
   view: yes
   entities:
@@ -22,11 +23,13 @@ cars:
     #- sensor.eta_homeschool
     #- device_tracker.beacon_varocar
 alarm_clock:
-  icon: mdi:alarm
+  name: Alarm Clock
   entities:
-    - input_select.alarm_clock
-    - input_boolean.alarm_clock
-    - input_boolean.lightalarmclock
+    - input_boolean.alarm_clock_status
+    - sensor.alarm_clock_time
+    - input_slider.alarm_clock_hour
+    - input_slider.alarm_clock_minute
+    - input_slider.alarm_clock_fade_in_minutes
 volume_control:
   icon: mdi:music-note-eighth
   entities:

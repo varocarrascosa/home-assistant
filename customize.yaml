@@ -18,8 +18,6 @@ group.scripts:
   control: hidden
 group.volume_control:
   friendly_name: Media Control
-script.night_music:
-  icon: mdi:music-circle
 script.say:
   hidden: true
 script.dominos:

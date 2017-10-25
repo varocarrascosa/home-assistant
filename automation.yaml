@@ -11,3 +11,27 @@
       data:
         push:
           badge: 5
+
+- alias: Set Sonos Alarm
+  trigger:
+    - platform: state
+      entity_id: input_boolean.alarm_clock_status
+      to: 'on'
+  action:
+    service: media_player.sonos_update_alarm
+    data_template:
+      entity_id: media_player.kitchen
+      alarm_id: 4
+      time: '{{ states.sensor.alarm_clock_time.state }}'
+      enabled: true
+- alias: Disable Sonos Alarm
+  trigger:
+    - platform: state
+      entity_id: input_boolean.alarm_clock_status
+      to: 'off'
+  action:
+    service: media_player.sonos_update_alarm
+    data_template:
+      entity_id: media_player.kitchen
+      alarm_id: 4
+      enabled: false
