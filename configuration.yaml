@@ -66,23 +66,6 @@ sensor:
     destination: 415 South St, Waltham, MA 02453
     name: 'ETA Home-Brandeis'
 
-  - platform: uber
-    server_token: keSesSEqKCxZndb-IVOfJWy_rWfiq5fBq4-zXm-g
-    start_latitude: 42.370113
-    start_longitude: -71.073655
-    end_latitude: 42.350504
-    end_longitude: -71.105404
-    product_ids:
-      - '2d1d002b-d4d0-4411-98e1-673b244878b2'
-
-  - platform: uber
-    server_token: keSesSEqKCxZndb-IVOfJWy_rWfiq5fBq4-zXm-g
-    start_latitude: 42.370113
-    start_longitude: -71.073655
-    end_latitude: 42.365045
-    end_longitude: -71.258225
-    product_ids:
-      - '2d1d002b-d4d0-4411-98e1-673b244878b2'
 # Text to speech
 tts:
   platform: google
@@ -120,8 +103,8 @@ shell_command: !include shell_command.yaml
   #port: 10944
   #client_id: homeassistant
   #keepalive: 60
-  #username: !secret broker_user
-  #password: !secret broker_pass
+  #username: !secrets broker_user
+  #password: !secrets broker_pass
   #birth_message:
   #  topic: 'hass/status'
   #  payload: 'online'
@@ -135,9 +118,9 @@ shell_command: !include shell_command.yaml
 
 
 #Wink
-#wink:
-  #access_token: !secret wink_access_token
-
+wink:
+  email: !secrets wink_email
+  password: !secrets wink_pass
 #Alexa
 #alexa:
   #intents: !include_dir_merge_named alexa
