@@ -66,6 +66,7 @@ sensor:
     origin: 1 Leighton St Cambridge
     destination: 415 South St, Waltham, MA 02453
     name: 'ETA Home-Brandeis'
+
   - platform: template
     sensors:
       alarm_clock_time:

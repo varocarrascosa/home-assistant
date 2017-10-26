@@ -50,6 +50,12 @@ night_music:
 rap:
   alias: 'Rap'
   sequence:
+    - service: script.say
+      data:
+        variables:
+          where: 'media_player.kitchen'
+          what: 'Tej is gay'
+    - delay: 00:00:01
     - service: media_player.select_source
       data:
         entity_id: media_player.kitchen
