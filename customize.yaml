@@ -18,7 +18,5 @@ group.scripts:
   control: hidden
 group.volume_control:
   friendly_name: Media Control
-script.say:
-  hidden: true
 script.dominos:
   icon: mdi:pizza
