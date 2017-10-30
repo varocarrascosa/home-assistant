@@ -12,8 +12,8 @@ say:
       data_template:
         entity_id: "{{ where }}"
     - service: tts.google_say
+      entity_id: "{{ where }}"
       data_template:
-        entity_id: "{{ where }}"
         message: "{{ what }}"
     - service: media_player.sonos_restore
       data_template:
@@ -24,28 +24,25 @@ night_music:
   sequence:
     - service: media_player.volume_set
       data:
-        entity_id: media_player.alvaros
+        entity_id: media_player.kitchen
         volume_level: .4
     - service: tts.google_say
+      entity_id: media_player.kitchen
       data:
-        entity_id: media_player.alvaros
-        message: 'Goodnight Alvaro, I will play some music for a little'
+        message: 'Goodnight guys, I will play some music for a little'
     - delay: 00:00:03
-    - service: light.turn_off
-      data:
-        entity_id: group.all_lights
     - service: media_player.select_source
       data:
-        entity_id: media_player.alvaros
-        source: 'Hot Hip Hop'
+        entity_id: media_player.kitchen
+        source: 'Migos'
     - service: media_player.volume_set
       data:
-        entity_id: media_player.alvaros
+        entity_id: media_player.kitchen
         volume_level: .15
     - delay: 01:00:00
     - service: media_player.media_pause
       data:
-        entity_id: media_player.alvaros
+        entity_id: media_player.kitchen
 
 rap:
   alias: 'Rap'
@@ -53,7 +50,7 @@ rap:
     - service: script.say
       data:
         variables:
-          where: 'media_player.kitchen'
+          where: media_player.kitchen
           what: 'Tej is gay'
     - delay: 00:00:01
     - service: media_player.select_source
