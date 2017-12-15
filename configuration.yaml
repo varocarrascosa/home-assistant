@@ -80,7 +80,12 @@ sensor:
 
 # Text to speech
 tts:
-  platform: google
+  - platform: amazon_polly
+    aws_access_key_id: 'AKIAJXPRNJRVTJHJN6DQ'
+    aws_secret_access_key: '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'
+    profile_name: 'varocarras'
+    region_name: 'us-east-1'
+    voice: Ivy
 
 #Automations
 automation: !include automation.yaml
