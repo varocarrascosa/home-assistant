@@ -13,7 +13,7 @@ night_music:
         entity_id: media_player.kitchen
         volume_level: .4
     - service: tts.amazon_polly_say
-      datan_template:
+      data_template:
         entity_id: media_player.kitchen
         message: 'Goodnight guys, I will play some music for a little'
     - delay: 00:00:03
