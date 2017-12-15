@@ -130,9 +130,9 @@ shell_command: !include shell_command.yaml
 
 
 #Wink
-wink:
-  email: !secret wink_user
-  password: !secret wink_pass
+#wink:
+#  email: !secret wink_user
+#  password: !secret wink_pass
 #Alexa
 #alexa:
   #intents: !include_dir_merge_named alexa
