@@ -4,6 +4,17 @@ update_config:
     - service: shell_command.get_latest_config
     - delay: 00:00:05
     - service: homeassistant.restart
+test1:
+  alias: 'Music Night'
+  sequence:
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.kitchen
+        volume_level: .4
+    - service: tts.google_say
+      entity_id: media_player.kitchen
+      data:
+        messate: 'Test completed'
 
 night_music:
   alias: 'Music Night'
