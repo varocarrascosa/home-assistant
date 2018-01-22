@@ -2,3 +2,8 @@ alarm_clock_status:
   name: 'Alarm Set'
   initial: off
   icon: mdi:alarm
+
+test_audio_notification:
+    name: Test Audio Notification
+    initial: off
+    icon: mdi:test-tube

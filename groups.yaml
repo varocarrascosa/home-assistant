@@ -15,6 +15,7 @@ scripts:
     - script.night_music
     - script.test1
     - script.update_config
+    - input_boolean.test_audio_notification
 cars:
   entities:
     #- sensor.eta_homeschool
