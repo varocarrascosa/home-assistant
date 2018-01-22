@@ -19,9 +19,10 @@ discovery:
 frontend:
 hassio:
 http:
+  api_password: !secrets mainpass
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  base_url: hass-ac.duckdns.org
+  base_url: hass-ac.duckdns.org:8123
 
 # Checks for available updates
 updater:
