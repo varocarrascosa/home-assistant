@@ -21,7 +21,7 @@ hassio:
 http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  base_url: https://hass-ac.duckdns.org:8123
+  base_url: hass-ac.duckdns.org
 
 # Checks for available updates
 updater:
