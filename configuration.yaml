@@ -22,7 +22,7 @@ http:
   api_password: !secret mainpass
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  base_url: hass-ac.duckdns.org:8123
+  base_url: https://hass-ac.duckdns.org:8123
 
 # Checks for available updates
 updater:
