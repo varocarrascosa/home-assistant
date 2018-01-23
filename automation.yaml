@@ -1,4 +1,4 @@
-- alias: 'test'
+- alias: test
   trigger:
     - platform: state
       entity_id: input_boolean.mytest
