@@ -1,14 +1,14 @@
 - alias: 'test'
-    trigger:
-      - platform: state
-        entity_id: input_boolean.mytest
-    action:
-      - service: script.sonos_say
-        data:
-          sonos_entity: media_player.kitchen
-          volume: 0.5
-          message: 'Your husband coming home!'
-          delay: '00:00:05'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.mytest
+  action:
+    - service: script.sonos_say
+      data:
+        sonos_entity: media_player.kitchen
+        volume: 0.5
+        message: 'Your husband coming home!'
+        delay: '00:00:05'
 
 #ios
 - alias: Notify iOS Birth Control
