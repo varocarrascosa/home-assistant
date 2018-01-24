@@ -4,17 +4,7 @@ update_config:
     - service: shell_command.get_latest_config
     - delay: 00:00:05
     - service: homeassistant.restart
-test1:
-  alias: 'Music Night'
-  sequence:
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.kitchen
-        volume_level: .4
-    - service: tts.google_say
-      entity_id: media_player.kitchen
-      data:
-        message: 'Test completed'
+
 
 night_music:
   alias: 'Music Night'
@@ -27,7 +17,7 @@ night_music:
       data:
         sonos_entity: media_player.kitchen
         message: 'Goodnight, I will play some music for a little'
-        delay: '00:00:03'
+        delay: '00:00:06'
     - service: media_player.select_source
       data:
         entity_id: media_player.kitchen
