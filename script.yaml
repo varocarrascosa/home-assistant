@@ -8,10 +8,10 @@ test:
   alias:'test'
   sequence:
     - service: tts.google_say
-        data_template:
-          entity_id: media_player.kitchen
-          language: "en"
-          message: 'Goodnight, I will play some music for a little'
+      data_template:
+        entity_id: media_player.kitchen
+        language: "en"
+        message: 'Goodnight, I will play some music for a little'
 
 night_music:
   alias: 'Music Night'
