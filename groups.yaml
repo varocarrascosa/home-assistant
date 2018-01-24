@@ -14,6 +14,7 @@ scripts:
   entities:
     - script.night_music
     - script.update_config
+    - script.test
 cars:
   entities:
     #- sensor.eta_homeschool
