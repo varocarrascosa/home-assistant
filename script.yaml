@@ -5,7 +5,7 @@ update_config:
     - delay: 00:00:05
     - service: homeassistant.restart
 test:
-  alias:'test'
+  alias: 'test'
   sequence:
     - service: tts.google_say
       data_template:
