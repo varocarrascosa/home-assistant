@@ -24,53 +24,53 @@
           badge: 5
 
 ###### automation for turning on the alarm ######
-id: alarm_clock_activated
-alias: Alarm Clock Activated
-hide_entity: False
-trigger:
-  platform: template
-  value_template: '{{ states.sensor.time.state == states.sensor.alarm_clock_time_long.state }}'
-condition:
-  condition: state
-  entity_id: input_boolean.alarm_clock_status
-  state: 'on'
-action:
-- service: script.turn_on
-  entity_id: script.s_alarm_clock_wake_up
-- service: notify.ios_alvaro
-  data:
-    title: "Alarm Clock"
-    message: "It's Time For You To Wake Up!"
-    data:
-      push:
-        sound: "US-EN-Alexa-Good-Morning.wav"
-        badge: 0
-        category: 'alarmclock'
+- id: alarm_clock_activated
+  alias: Alarm Clock Activated
+  hide_entity: False
+  trigger:
+    platform: template
+    value_template: '{{ states.sensor.time.state == states.sensor.alarm_clock_time_long.state }}'
+    condition:
+      condition: state
+      entity_id: input_boolean.alarm_clock_status
+      state: 'on'
+    action:
+    - service: script.turn_on
+      entity_id: script.s_alarm_clock_wake_up
+    - service: notify.ios_alvaro
+      data:
+        title: "Alarm Clock"
+        message: "It's Time For You To Wake Up!"
+        data:
+          push:
+            sound: "US-EN-Alexa-Good-Morning.wav"
+            badge: 0
+            category: 'alarmclock'
 
 ###### awake actionable notification pushed ######
-id: a_alarm_clock_awake_action
-alias: alarm clock awake action
-initial_state: true
-hide_entity: true
-trigger:
-  platform: event
-  event_type: ios.notification_action_fired
-  event_data:
+- id: a_alarm_clock_awake_action
+  alias: alarm clock awake action
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
     actionName: AWAKE
-action:
-  service: script.turn_on
-  entity_id: script.s_alarm_clock_awake
+  action:
+    service: script.turn_on
+    entity_id: script.s_alarm_clock_awake
 
 ###### snooze actionable notification pushed ######
-id: a_alarm_clock_snooze_action
-alias: alarm clock snooze action
-initial_state: true
-hide_entity: true
-trigger:
-  platform: event
-  event_type: ios.notification_action_fired
-  event_data:
+- id: a_alarm_clock_snooze_action
+  alias: alarm clock snooze action
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
     actionName: SNOOZE
-action:
-  service: script.turn_on
-  entity_id: script.s_alarm_clock_snooze
+  action:
+    service: script.turn_on
+    entity_id: script.s_alarm_clock_snooze
