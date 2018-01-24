@@ -16,6 +16,7 @@ night_music:
     - service: script.sonos_say
       data:
         sonos_entity: media_player.kitchen
+        volume: '.6'
         message: 'Goodnight, I will play some music for a little'
         delay: '00:00:06'
     - service: media_player.select_source
