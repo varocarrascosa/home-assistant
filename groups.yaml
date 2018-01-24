@@ -23,11 +23,10 @@ cars:
 alarm_clock:
   name: Alarm Clock
   entities:
-    - input_boolean.alarm_clock_status
     - sensor.alarm_clock_time
     - input_number.alarm_clock_hour
-    - input_number.alarm_clock_minute
-    - input_number.alarm_clock_fade_in_minutes
+    - input_number.alarm_clock_minutes
+    - input_boolean.alarm_clock_status
 volume_control:
   icon: mdi:music-note-eighth
   entities:

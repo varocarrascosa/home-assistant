@@ -6,7 +6,7 @@
     - service: script.sonos_say
       data:
         sonos_entity: media_player.kitchen
-        volume: 0.5
+        volume: 0.9
         message: 'Your husband coming home!'
         delay: '00:00:05'
 
@@ -23,26 +23,54 @@
         push:
           badge: 5
 
-- alias: Set Sonos Alarm
-  trigger:
-    - platform: state
-      entity_id: input_boolean.alarm_clock_status
-      to: 'on'
-  action:
-    service: media_player.sonos_update_alarm
-    data_template:
-      entity_id: media_player.kitchen
-      alarm_id: 4
-      time: '{{ states.sensor.alarm_clock_time.state }}'
-      enabled: true
-- alias: Disable Sonos Alarm
-  trigger:
-    - platform: state
-      entity_id: input_boolean.alarm_clock_status
-      to: 'off'
-  action:
-    service: media_player.sonos_update_alarm
-    data_template:
-      entity_id: media_player.kitchen
-      alarm_id: 4
-      enabled: false
+###### automation for turning on the alarm ######
+id: alarm_clock_activated
+alias: Alarm Clock Activated
+hide_entity: False
+trigger:
+  platform: template
+  value_template: '{{ states.sensor.time.state == states.sensor.alarm_clock_time_long.state }}'
+condition:
+  condition: state
+  entity_id: input_boolean.alarm_clock_status
+  state: 'on'
+action:
+- service: script.turn_on
+  entity_id: script.s_alarm_clock_wake_up
+- service: notify.ios_alvaro
+  data:
+    title: "Alarm Clock"
+    message: "It's Time For You To Wake Up!"
+    data:
+      push:
+        sound: "US-EN-Alexa-Good-Morning.wav"
+        badge: 0
+        category: 'alarmclock'
+
+###### awake actionable notification pushed ######
+id: a_alarm_clock_awake_action
+alias: alarm clock awake action
+initial_state: true
+hide_entity: true
+trigger:
+  platform: event
+  event_type: ios.notification_action_fired
+  event_data:
+    actionName: AWAKE
+action:
+  service: script.turn_on
+  entity_id: script.s_alarm_clock_awake
+
+###### snooze actionable notification pushed ######
+id: a_alarm_clock_snooze_action
+alias: alarm clock snooze action
+initial_state: true
+hide_entity: true
+trigger:
+  platform: event
+  event_type: ios.notification_action_fired
+  event_data:
+    actionName: SNOOZE
+action:
+  service: script.turn_on
+  entity_id: script.s_alarm_clock_snooze

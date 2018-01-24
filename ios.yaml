@@ -1,11 +1,12 @@
-push:
-  categories:
-    - name: Birth Control Alarm
-      identifier: 'MEDS_NOT_TAKEN'
-      actions:
-        - identifier: 'BIRTH_DONTROL_TAKEN'
-          title: 'Mark meds as taken'
-          activationMode: 'background'
-          authenticationRequired: no
-          destructive: yes
-          behavior: 'default'
+ios:
+  push:
+    categories:
+      - name: alarm clock
+        identifier: 'alarmclock'
+        actions:
+          - identifier: 'AWAKE'
+            title: 'Awake'
+            destructive: no
+          - identifier: 'SNOOZE'
+            title: 'Snooze'
+            destructive: yes

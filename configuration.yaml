@@ -14,15 +14,11 @@ homeassistant:
   customize: !include customize.yaml
 
 
-discovery:
 # Enables the frontend
 frontend:
-hassio:
+
 http:
   api_password: !secret mainpass
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
-  base_url: https://hass-ac.duckdns.org:8123
 
 # Checks for available updates
 updater:
@@ -70,14 +66,27 @@ sensor:
 
   - platform: template
     sensors:
+      alarm_clock_hour:
+        value_template: '{{ states.input_number.alarm_clock_hour.state | int }}'
+      alarm_clock_minutes:
+        value_template: '{{ states.input_number.alarm_clock_minutes.state | int }}'
       alarm_clock_time:
-        friendly_name: 'Alarm Time'
-        icon_template: 'mdi:alarm'
-        value_template: '{{ "%0.02d:%0.02d" | format(states.input_number.alarm_clock_hour.state | int, states.input_number.alarm_clock_minute.state | int ) }}'
-      alarm_clock_fade_in_minutes:
-        friendly_name: 'Fade In (Minutes)'
-        icon_template: 'mdi:gradient'
-        value_template: '{{ states.input_number.alarm_clock_fade_in_minutes.state | int }}'
+        value_template: >-
+          {{ states.sensor.alarm_clock_hour.state }}:
+          {%- if states.sensor.alarm_clock_minutes.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.alarm_clock_minutes.state }}
+      alarm_clock_time_long:
+        value_template: >-
+          {% if states.sensor.alarm_clock_hour.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.alarm_clock_hour.state }}:
+          {%- if states.sensor.alarm_clock_minutes.state|length == 1 -%}
+            0
+          {%- endif -%}
+            {{ states.sensor.alarm_clock_minutes.state }}
 
 # Text to speech
 tts:
@@ -96,18 +105,18 @@ script: !include script.yaml
 input_boolean: !include booleans.yaml
 
 #Sliders
-input_number: !include sliders.yaml
+input_number: !include input_number.yaml
 
 #Groups
 group: !include groups.yaml
 
 #Notifications
-#notify:
-  #- platform: ios
-    #name: ios_alvaro
-    #target: f729c78b-c577-3876-b34f-1fcffc8fb067
+notify:
+  - platform: ios
+    name: ios_alvaro
+    target: f729c78b-c577-3876-b34f-1fcffc8fb067
 
-#Shell commands
+#Shell commandss
 shell_command: !include shell_command.yaml
 
 #MQTT
