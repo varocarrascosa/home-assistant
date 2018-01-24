@@ -1,12 +1,11 @@
-ios:
-  push:
-    categories:
-      - name: alarm clock
-        identifier: 'alarmclock'
-        actions:
-          - identifier: 'AWAKE'
-            title: 'Awake'
-            destructive: no
-          - identifier: 'SNOOZE'
-            title: 'Snooze'
-            destructive: yes
+push:
+  categories:
+    - name: alarm clock
+      identifier: 'alarmclock'
+      actions:
+        - identifier: 'AWAKE'
+          title: 'Awake'
+          destructive: no
+        - identifier: 'SNOOZE'
+          title: 'Snooze'
+          destructive: yes

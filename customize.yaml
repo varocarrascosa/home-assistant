@@ -20,3 +20,6 @@ group.volume_control:
   friendly_name: Media Control
 script.dominos:
   icon: mdi:pizza
+sensor.alarm_clock_time:
+  friendly_name: Alarm Clock
+  icon: mdi:clock

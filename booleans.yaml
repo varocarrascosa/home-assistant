@@ -1,2 +1,4 @@
 alarm_clock_status:
+  icon: mdi:switch
+  name: Status
   initial: on
