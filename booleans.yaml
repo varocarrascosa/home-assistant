@@ -1,7 +1,2 @@
 alarm_clock_status:
   initial: on
-
-mytest:
-    name: Test Audio Notification
-    initial: off
-    icon: mdi:test-tube

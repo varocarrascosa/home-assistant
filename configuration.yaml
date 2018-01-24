@@ -13,10 +13,6 @@ homeassistant:
 
   customize: !include customize.yaml
 
-
-# Enables the frontend
-frontend:
-
 http:
   api_password: !secret mainpass
 
@@ -93,7 +89,7 @@ tts:
   - platform: google
 
 #Automations
-automation: !include automation.yaml
+#automation: !include automation.yaml
 
 #Scripts
 script: !include script.yaml

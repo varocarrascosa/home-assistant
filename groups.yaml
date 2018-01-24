@@ -13,9 +13,7 @@ Media:
 scripts:
   entities:
     - script.night_music
-    - script.test1
     - script.update_config
-    - input_boolean.mytest
 cars:
   entities:
     #- sensor.eta_homeschool
