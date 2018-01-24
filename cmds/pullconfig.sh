@@ -1,6 +1,6 @@
 #!/bin/bash
-mkdir /config/temp
-cd /config/temp/
+mkdir /home/pi/.homeassistant/temp/
+cd /home/pi/.homeassistant/temp/
 git clone https://github.com/varocarrascosa/home-assistant.git
-cp -r /config/temp/home-assistant/* /config/
-rm -rf /config/temp
+cp -r /home/pi/.homeassistant/temp/home-assistant/* /home/pi/.homeassistant/
+rm -rf /home/pi/.homeassistant/temp
