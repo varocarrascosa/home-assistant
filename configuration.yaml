@@ -134,6 +134,13 @@ notify:
 #Shell commandss
 shell_command: !include shell_command.yaml
 
+
+wink:
+  email: varocarras@gmail.com
+  password: varoCARR98
+  client_id: QydbH6X6ZM2kmKUBEHGq7XugfqYMTJlG
+  client_secret: N1dUBax-WPSXSHBvduZxg2SDj6BFckB7
+
 #MQTT
 #mqtt:
   #broker: m13.cloudmqtt.com
