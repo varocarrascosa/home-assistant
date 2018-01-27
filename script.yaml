@@ -13,6 +13,7 @@ test:
         message: "It's Time For You To Wake Up!"
         data:
           push:
+            sound: "US-EN-Alexa-Good-Morning.wav"
             badge: 0
             category: 'alarmclock'
 night_music:
