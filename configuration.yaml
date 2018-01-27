@@ -65,6 +65,9 @@ device_tracker:
 
 # Weather Prediction
 sensor:
+  sensor:
+  - platform: moon
+  
   - platform: yr
 
   - platform: google_travel_time
