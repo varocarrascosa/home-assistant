@@ -2,3 +2,11 @@ alarm_clock_status:
   icon: mdi:switch
   name: Status
   initial: on
+
+meds_taken:
+    name: BC have been taken
+    initial: 'off'
+    icon: mdi:pill
+meds_reminder:
+    name: BC reminder enabled
+    initial: 'on'

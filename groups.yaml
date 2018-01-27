@@ -31,3 +31,8 @@ alarm_clock:
 volume_control:
   icon: mdi:music-note-eighth
   entities:
+
+meds_reminder:
+    entities:
+      - input_boolean.meds_taken
+      - input_boolean.meds_reminder

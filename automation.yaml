@@ -11,17 +11,47 @@
         delay: '00:00:05'
 
 #ios
-- alias: Notify iOS Birth Control
-  trigger:
-    platform: time
-    at: '18:30:00'
-  action:
-    service: notify.ashlee_phone
-    data:
-      message: "Please take the Birth Control"
-      data:
-        push:
-          badge: 5
+- alias: Reset meds taken
+    trigger:
+      platform: state
+      entity_id: input_boolean.meds_taken
+      to: 'on'
+      for:
+        hours: 16
+    action:
+      service: input_boolean.turn_off
+
+  - alias: Mark meds as taken from notification
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: 'MARK_MEDS_TAKEN'
+    action:
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.meds_taken
+
+  - alias: Meds have not been taken weekday
+    trigger:
+      platform: time
+      after: '20:00:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.meds_taken
+          state: 'off'
+        - condition: state
+          entity_id: input_boolean.meds_reminder
+          state: 'on'
+    action:
+      - service: notify.ios_ashlee
+        data:
+          title: "Birth Control"
+          message: "Ashlee's BC has not been taken!"
+          data:
+            push:
+              category: 'MEDS_NOT_TAKEN'
 
 ###### automation for turning on the alarm ######
 - id: alarm_clock_activated
