@@ -3,7 +3,7 @@ default_view:
   entities:
     - group.alarm_clock
     - group.scripts
-    - group.alarm_lights
+    - light.light_bulb
 Surveillance:
   view: yes
   entities:
