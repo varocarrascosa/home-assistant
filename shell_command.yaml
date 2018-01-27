@@ -4,7 +4,7 @@ order_dominos: bash /home/homeassistant/.homeassistant/cmds/dominos.sh
 
 notify_weekdaysleave: bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "ashleeruiz2" "Alvaro has just left home"
 
-tv_lr_off: curl -k -H "Content-Type: application/json" -H "AUTH: Zxwxlh0ada" -X PUT -d '{"KEYLIST": [{"CODESET": 5,"CODE": 0,"ACTION":"KEYPRESS"}]}' https://10.0.0.18:9000/key_command/
+tv_lr_off: "curl -k -H "Content-Type: application/json" -H "AUTH: Zxwxlh0ada" -X PUT -d '{"KEYLIST": [{"CODESET": 5,"CODE": 0,"ACTION":"KEYPRESS"}]}' https://10.0.0.18:9000/key_command/"
 
 #To notify through twitter
 #bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "Username" "Message"
