@@ -8,6 +8,7 @@ default_view:
     - device_tracker.ios_alvaro
     - device_tracker.ios_ashlee
     - sensor.moon
+    - script.test
 Surveillance:
   view: yes
   entities:

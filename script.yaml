@@ -4,7 +4,17 @@ update_config:
     - service: shell_command.get_latest_config
     - delay: 00:00:05
     - service: homeassistant.restart
-
+test:
+  alias: 'test'
+  sequence:
+    - service: notify.ios_ios_alvaro
+      data:
+        title: "Alarm Clock"
+        message: "It's Time For You To Wake Up!"
+        data:
+          push:
+            badge: 0
+            category: 'alarmclock'
 night_music:
   alias: 'Music Night'
   sequence:
