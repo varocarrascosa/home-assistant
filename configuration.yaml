@@ -1,6 +1,6 @@
 homeassistant:
   packages: !include_dir_named packages
-  python_script: !include_dir_named python_script
+
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
@@ -14,6 +14,8 @@ homeassistant:
   time_zone: America/New_York
 
   customize: !include customize.yaml
+
+python_script:
 
 http:
   api_password: !secret mainpass
