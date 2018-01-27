@@ -136,10 +136,7 @@ shell_command: !include shell_command.yaml
 
 
 wink:
-  email: !secret wemail
-  password: !secret wpass
-  client_id: !secret wid
-  client_secret: !secret wss
+
 
 #MQTT
 #mqtt:
