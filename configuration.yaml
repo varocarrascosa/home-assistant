@@ -136,10 +136,10 @@ shell_command: !include shell_command.yaml
 
 
 wink:
-  email: varocarras@gmail.com
-  password: varoCARR98
-  client_id: QydbH6X6ZM2kmKUBEHGq7XugfqYMTJlG
-  client_secret: N1dUBax-WPSXSHBvduZxg2SDj6BFckB7
+  email: !secret wemail
+  password: !secret wpass
+  client_id: !secret wid
+  client_secret: !secret wss
 
 #MQTT
 #mqtt:
