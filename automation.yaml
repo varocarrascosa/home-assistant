@@ -67,7 +67,7 @@
     action:
     - service: script.turn_on
       entity_id: script.s_alarm_clock_wake_up
-    - service: notify.ios_alvaro
+    - service: notify.ios_ios_alvaro
       data:
         title: "Alarm Clock"
         message: "It's Time For You To Wake Up!"
