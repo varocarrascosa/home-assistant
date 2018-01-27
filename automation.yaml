@@ -49,10 +49,10 @@
   trigger:
     platform: template
     value_template: '{{ states.sensor.current_day_time.state == states.sensor.alarm_clock_time_long.state }}'
-    condition:
-      condition: state
-      entity_id: input_boolean.alarm_clock_status
-      state: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.alarm_clock_status
+    state: 'on'
   action:
     - service: script.turn_on
       entity_id: script.s_alarm_clock_wake_up
