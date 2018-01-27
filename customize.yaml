@@ -23,3 +23,6 @@ script.dominos:
 sensor.alarm_clock_time:
   friendly_name: Alarm Clock
   icon: mdi:clock
+group.meds_reminder:
+  friendly_name: Birth Control
+  icon: mdi:pill

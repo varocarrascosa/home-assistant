@@ -107,14 +107,10 @@ sensor:
 tts:
   - platform: google
 
-#Automations
-#automation: !include automation.yaml
 
 #Scripts
 script: !include script.yaml
 
-#Inputs
-#input_select: !include selects.yaml
 
 #Booleans
 input_boolean: !include booleans.yaml
@@ -157,11 +153,5 @@ wink:
    # qos: 1
    # retain: true
 
-
-#Wink
-#wink:
-#  email: !secret wink_user
-#  password: !secret wink_pass
-#Alexa
 #alexa:
   #intents: !include_dir_merge_named alexa

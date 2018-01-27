@@ -5,6 +5,8 @@ default_view:
     - group.scripts
     - light.light_bulb
     - group.meds_reminder
+    - device_tracker.ios_alvaro
+    - device_tracker.ios_ashlee
 Surveillance:
   view: yes
   entities:

@@ -10,3 +10,4 @@ meds_taken:
 meds_reminder:
     name: BC reminder enabled
     initial: 'on'
+    icon: mdi:cellphone-iphone
