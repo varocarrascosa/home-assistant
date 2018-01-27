@@ -26,3 +26,7 @@ sensor.alarm_clock_time:
 group.meds_reminder:
   friendly_name: Birth Control
   icon: mdi:pill
+device_tracker.ios_alvaro:
+  entity_picture: http://avatarmaker.com/svgavatars/temp-avatars/svgA6174133902272185.png
+device_tracker.ios_ashlee:
+  entity_picture: http://avatarmaker.com/svgavatars/temp-avatars/svgA6330236120032238.png
