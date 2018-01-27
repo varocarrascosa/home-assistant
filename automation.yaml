@@ -48,7 +48,7 @@
   hide_entity: False
   trigger:
     platform: template
-    value_template: '{{ states("sensor.time") == states("sensor.alarm_clock_time_long") }}'
+    value_template: '{{ states.sensor.current_day_time.state == states.sensor.alarm_clock_time_long.state }}'
     condition:
       condition: state
       entity_id: input_boolean.alarm_clock_status

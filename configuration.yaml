@@ -83,6 +83,11 @@ sensor:
 
   - platform: template
     sensors:
+      current_day_time:
+        value_template: '{{ now().strftime("%H:%M") }}'
+
+  - platform: template
+    sensors:
       alarm_clock_hour:
         value_template: '{{ states.input_number.alarm_clock_hour.state | int }}'
       alarm_clock_minutes:
