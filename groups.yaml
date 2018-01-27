@@ -1,15 +1,18 @@
 default_view:
   view: yes
   entities:
-    - group.alarm_clock
+    #- group.alarm_clock
     - group.scripts
-    - light.light_bulb
     - group.meds_reminder
     - device_tracker.ios_alvaro
     - device_tracker.ios_ashlee
     - sensor.moon
-    - script.test
     - group.weather_card_forecast
+Lights:
+  view: yes
+  entities:
+    - light.light_bulb
+    - light.bathroom_light
 Surveillance:
   view: yes
   entities:

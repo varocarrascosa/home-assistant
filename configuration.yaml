@@ -66,6 +66,10 @@ ios: !include ios.yaml
 #Device Tracker
 device_tracker:
   - platform: owntracks
+  - platform: icloud
+    username: alvaro.carrascosa@hotmail.com
+    password: !secret icloud_pass
+    account_name: icloud_alvaro
 
 # Weather Prediction
 sensor:
