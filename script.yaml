@@ -4,14 +4,6 @@ update_config:
     - service: shell_command.get_latest_config
     - delay: 00:00:05
     - service: homeassistant.restart
-test:
-  alias: 'test'
-  sequence:
-    - service: tts.google_say
-      data_template:
-        entity_id: media_player.kitchen
-        language: "en"
-        message: 'Goodnight, I will play some music for a little'
 
 night_music:
   alias: 'Music Night'

@@ -7,6 +7,7 @@ meds_taken:
     name: BC have been taken
     initial: 'off'
     icon: mdi:pill
+
 meds_reminder:
     name: BC reminder enabled
     initial: 'on'

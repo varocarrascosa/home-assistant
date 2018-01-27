@@ -18,7 +18,6 @@ scripts:
   entities:
     - script.night_music
     - script.update_config
-    - script.test
     - switch.living_room_tv
 cars:
   entities:
