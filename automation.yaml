@@ -6,7 +6,7 @@
       entity_id: input_boolean.meds_taken
       to: 'on'
       for:
-        hours: 16
+        hours: 4
     action:
       service: input_boolean.turn_off
 
@@ -48,7 +48,7 @@
   hide_entity: False
   trigger:
     platform: template
-    value_template: '{{ states.sensor.time.state == states.sensor.alarm_clock_time_long.state }}'
+    value_template: '{{ states("sensor.time") == states("sensor.alarm_clock_time_long") }}'
     condition:
       condition: state
       entity_id: input_boolean.alarm_clock_status
@@ -62,7 +62,6 @@
         message: "It's Time For You To Wake Up!"
         data:
           push:
-            sound: "US-EN-Alexa-Good-Morning.wav"
             badge: 0
             category: 'alarmclock'
 
