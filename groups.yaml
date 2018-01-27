@@ -9,6 +9,7 @@ default_view:
     - device_tracker.ios_ashlee
     - sensor.moon
     - script.test
+    - group.weather_card_forecast
 Surveillance:
   view: yes
   entities:
