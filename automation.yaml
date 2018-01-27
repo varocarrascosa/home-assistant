@@ -53,7 +53,7 @@
       condition: state
       entity_id: input_boolean.alarm_clock_status
       state: 'on'
-    action:
+  action:
     - service: script.turn_on
       entity_id: script.s_alarm_clock_wake_up
     - service: notify.ios_ios_alvaro
