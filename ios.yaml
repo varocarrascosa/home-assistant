@@ -9,8 +9,6 @@ push:
         - identifier: 'SNOOZE'
           title: 'Snooze'
           destructive: yes
-push:
-  categories:
     - name: Meds Not Taken
       identifier: 'MEDS_NOT_TAKEN'
       actions:
