@@ -26,28 +26,28 @@ updater:
 switch:
   - platform: command_line
     switches:
-      - living_room_tv:
-          friendly_name: Living Room TV
-          command_on: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 1,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.18:9000/key_command/"
-          command_off: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 0,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.18:9000/key_command/"
-          command_state: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X GET https://10.0.0.18:9000/state/device/power_mode"
-          value_template: >
-            {% if value_json.ITEMS.0.VALUE == 1 %}
-              true
-            {% else %}
-              false
-            {% endif %}
-      - bedroom_tv:
-          friendly_name: Bedroom TV
-          command_on: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 1,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.82:9000/key_command/"
-          command_off: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 0,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.82:9000/key_command/"
-          command_state: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X GET https://10.0.0.82:9000/state/device/power_mode"
-          value_template: >
-            {% if value_json.ITEMS.0.VALUE == 1 %}
-              true
-            {% else %}
-              false
-            {% endif %}
+      living_room_tv:
+        friendly_name: Living Room TV
+        command_on: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 1,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.18:9000/key_command/"
+        command_off: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 0,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.18:9000/key_command/"
+        command_state: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X GET https://10.0.0.18:9000/state/device/power_mode"
+        value_template: >
+          {% if value_json.ITEMS.0.VALUE == 1 %}
+            true
+          {% else %}
+            false
+          {% endif %}
+      bedroom_tv:
+        friendly_name: Bedroom TV
+        command_on: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 1,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.82:9000/key_command/"
+        command_off: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 0,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.82:9000/key_command/"
+        command_state: "/usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zlzjygadcn\" -X GET https://10.0.0.82:9000/state/device/power_mode"
+        value_template: >
+          {% if value_json.ITEMS.0.VALUE == 1 %}
+            true
+          {% else %}
+            false
+          {% endif %}
 
 # Discover some devices automatically
 media_player:
