@@ -7,7 +7,7 @@ update_config:
 test:
   alias: 'test'
   sequence:
-    - service: notify.ios_ios_alvaro
+    - service: notify.ios_ios_ashlee
       data:
         title: "Alarm Clock"
         message: "It's Time For You To Wake Up!"
