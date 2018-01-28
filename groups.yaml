@@ -8,7 +8,10 @@ default_view:
     - device_tracker.ios_ashlee
     - sensor.moon
     - group.weather_card_forecast
-
+alltrackers:
+  entities:
+    - group.alltrackers
+    - device_tracker.ios_ashlee
 alvaro_tracker:
   entities:
     - device_tracker.ios_alvaro
@@ -20,12 +23,8 @@ switches:
 l&s:
   view: yes
   entities:
-      - group.lights
+      - group.all_lights
       - group.switches
-lights:
-  entities:
-    - light.light_bulb
-    - light.bathroom_top
 Surveillance:
   view: yes
   entities:

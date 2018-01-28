@@ -13,6 +13,12 @@ group.alvaro_lights:
 group.alarm_clock:
   friendly_name: Alarm Clock
   control: hidden
+group.all_lights:
+  friendly_name: Lights
+  icon: mdi:ceiling-light
+group.switches:
+  friendly_name: switches
+  icon: mdi:dip-switch
 group.scripts:
   friendly_name: Options
   control: hidden

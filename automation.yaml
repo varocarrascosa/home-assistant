@@ -92,3 +92,13 @@
   action:
     service: script.turn_on
     entity_id: script.s_alarm_clock_snooze
+
+#Light Off When Away
+- alias: Lights Off When Away
+    trigger:
+      platform: state
+      entity_id: group.alltrackers
+      to: 'not_home'
+    action:
+      service: light.turn_off
+      entity_id: group.all_lights
