@@ -4,7 +4,7 @@ order_dominos: bash /home/homeassistant/.homeassistant/cmds/dominos.sh
 
 notify_weekdaysleave: bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "ashleeruiz2" "Alvaro has just left home"
 
-xbox: /usr/bin/curl -k -H "Content-Type: application/json" -H "AUTH: Zxwxlh0ada" -X PUT -d '{"REQUEST": "MODIFY","VALUE": "XBOX","HASHVAL": 1384176329}' https://10.0.0.18:9000/menu_native/dynamic/tv_settings/devices/current_input
+xbox: /usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"REQUEST\": \"MODIFY\",\"VALUE\": \"XBOX\",\"HASHVAL\": 1384176329}' https://10.0.0.18:9000/menu_native/dynamic/tv_settings/devices/current_input
 #xbox: /usr/bin/curl -k -H \"Content-Type: application/json\" -H \"AUTH: Zxwxlh0ada\" -X PUT -d '{\"KEYLIST\": [{\"CODESET\": 11,\"CODE\": 1,\"ACTION\":\"KEYPRESS\"}]}' https://10.0.0.18:9000/key_command/
 #To notify through twitter
 #bash /home/homeassistant/.homeassistant/cmds/twitternotify.sh "Username" "Message"
