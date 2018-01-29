@@ -155,7 +155,11 @@ shell_command: !include shell_command.yaml
 
 wink:
 
-
+weblink:
+  entities:
+    - name: Admit Me
+      url: https://www.admitme.tv/
+      icon: mdi:tv
 #MQTT
 #mqtt:
   #broker: m13.cloudmqtt.com
