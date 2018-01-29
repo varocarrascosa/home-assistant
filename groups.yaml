@@ -8,6 +8,8 @@ default_view:
     - device_tracker.ios_ashlee
     - sensor.moon
     - group.weather_card_forecast
+    - sensor.eta_homebrandeis
+    - sensor.eta_homebu
 alltrackers:
   entities:
     - group.alltrackers

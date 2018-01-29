@@ -1,6 +1,12 @@
-sensor.eta_homeschool:
-  friendly_name: Home to School
+sensor.eta_homebu:
+  friendly_name: Home to BU
   icon: mdi:timer-sand
+sensor.eta_homebrandeis:
+  friendly_name: Home to Brandeis
+  icon: mdi:timer-sand
+group.l&s:
+  friendly_name: ''
+  icon: mdi:dip-switch
 group.Surveillance:
   friendly_name: ''
   icon: mdi:security
@@ -17,7 +23,7 @@ group.all_lights:
   friendly_name: Lights
   icon: mdi:ceiling-light
 group.switches:
-  friendly_name: switches
+  friendly_name: Switches
   icon: mdi:dip-switch
 group.scripts:
   friendly_name: Options
