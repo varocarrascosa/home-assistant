@@ -4,7 +4,7 @@ sensor.eta_homebu:
 sensor.eta_homebrandeis:
   friendly_name: Home to Brandeis
   icon: mdi:timer-sand
-group.l&s:
+group.lands:
   friendly_name: ''
   icon: mdi:dip-switch
 group.Surveillance:

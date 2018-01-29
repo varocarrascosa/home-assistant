@@ -22,7 +22,7 @@ switches:
   entities:
     - switch.living_room_tv
     - switch.bedroom_tv
-l&s:
+lands:
   view: yes
   entities:
       - group.all_lights
