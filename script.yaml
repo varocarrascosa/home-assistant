@@ -7,15 +7,12 @@ update_config:
 test:
   alias: 'test'
   sequence:
-    - service: notify.ios_ios_ashlee
+    - service: media_player.play_media
       data:
-        title: "Alarm Clock"
-        message: "It's Time For You To Wake Up!"
-        data:
-          push:
-            sound: "US-EN-Alexa-Good-Morning.wav"
-            badge: 0
-            category: 'alarmclock'
+        entity_id: media_player.bedroom_tv
+        media_content_id: https://www.youtube.com/watch?v=yFLRswDG0ao
+        media_content_type: video
+        
 night_music:
   alias: 'Music Night'
   sequence:
