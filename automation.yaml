@@ -2,7 +2,7 @@
 - alias: Reminder MA113
     trigger:
       platform: time
-      after: '19:50:00'
+      after: '11:20:00'
     condition:
       condition:
       weekday:
@@ -15,7 +15,7 @@
         entity_id: media_player.kitchen
     - service: tts.google_say
       entity_id: media_player.kitchen
-      data:
+      data_template:
         language: "en"
         message: "Alvaro, your MA113 will start at 12:20, start getting ready"
 #School Schedule

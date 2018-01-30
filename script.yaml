@@ -7,16 +7,15 @@ update_config:
 test:
   alias: 'test'
   sequence:
-    - service: media_player.play_media
+    - service: script.SONOS_UPDATE_ALARM
       data:
-        entity_id: media_player.bedroom_tv
-        media_content_id: https://www.youtube.com/watch?v=yFLRswDG0ao
-        media_content_type: video
-        
+        entity_id: media_player.kitchen
+        alarm_id: 0
+        enabled: true
+
 night_music:
   alias: 'Music Night'
   sequence:
-
     - service: tts.google_say
       data_template:
         entity_id: media_player.kitchen

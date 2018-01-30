@@ -34,6 +34,7 @@ Media:
   view: yes
   entities:
     - media_player.kitchen
+    - media_player.bedroom_2
 scripts:
   entities:
     - script.night_music
