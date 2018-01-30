@@ -7,7 +7,7 @@ update_config:
 test:
   alias: 'test'
   sequence:
-    - service: script.SONOS_UPDATE_ALARM
+    - service: media_player.SONOS_UPDATE_ALARM
       data:
         entity_id: media_player.kitchen
         alarm_id: 0
