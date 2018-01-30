@@ -1,0 +1,6 @@
+intent_script:
+  tvon:
+    action:
+      - service: switch.turn_on
+        data_template:
+          entity_id: switch.{{ objectLocation | replace(" ","_") }}

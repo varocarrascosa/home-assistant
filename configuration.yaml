@@ -149,6 +149,7 @@ group: !include groups.yaml
 
 #Notifications
 
+snips: !include snips.yaml
 #Shell commandss
 shell_command: !include shell_command.yaml
 
@@ -161,13 +162,11 @@ weblink:
       url: https://www.admitme.tv/
       icon: mdi:tv
 #MQTT
-#mqtt:
-  #broker: m13.cloudmqtt.com
-  #port: 10944
-  #client_id: homeassistant
-  #keepalive: 60
-  #username: !secrets broker_user
-  #password: !secrets broker_pass
+mqtt:
+  broker: m10.cloudmqtt.com
+  port: 11165
+  username: giqzjvqn
+  password: dPd4pA3ddPu8
   #birth_message:
   #  topic: 'hass/status'
   #  payload: 'online'
