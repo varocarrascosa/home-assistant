@@ -150,12 +150,8 @@ group: !include groups.yaml
 #Notifications
 
 snips:
-  intent_script:
-    tvon:
-      action:
-        - service: switch.turn_on
-          data_template:
-            entity_id: switch.{{ objectLocation | replace(" ","_") }}
+
+intent_script: !include snips.yaml
 
 #Shell commandss
 shell_command: !include shell_command.yaml
