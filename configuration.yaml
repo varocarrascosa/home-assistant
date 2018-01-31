@@ -163,10 +163,8 @@ weblink:
       icon: mdi:tv
 #MQTT
 mqtt:
-  broker: m10.cloudmqtt.com
-  port: 11165
-  username: giqzjvqn
-  password: dPd4pA3ddPu8
+  broker: 10.0.0.206
+  port: 9898
   #birth_message:
   #  topic: 'hass/status'
   #  payload: 'online'
