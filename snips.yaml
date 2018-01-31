@@ -1,5 +1,10 @@
-tvon:
-  action:
-    - service: switch.turn_on
-      data_template:
-        entity_id: switch.{{ objectLocation | replace(" ","_") }}
+ActivateObject:
+    action:
+      - service_template: >
+          {% if OnOff == "on" -%}
+            switch.turn_on
+          {%- else -%}
+            switch.turn_off
+          {% endif %}
+        data_template:
+          entity_id: "switch.{{ device | string }}"
