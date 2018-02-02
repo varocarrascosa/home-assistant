@@ -24,3 +24,9 @@ StationPlay:
         data_template:
           language: 'en'
           message: !include confirmtts.yaml
+WhereIntent:
+    action:
+      - service: script.sonos_working
+        data_template:
+          language: 'en'
+          message: "{{ entity | string }} seems to be {{ states.group_{{ entity | string }}_tracker.state }}"
