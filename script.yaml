@@ -51,7 +51,7 @@ sonos_working:
         data_template:
           entity_id: media_player.kitchen
           language: "{{ language }}"
-          message: "{{ message }} {{now().strftime('%H:%M:%S')}}"
+          message: "{{ message }}"
       - delay: >-
           {% set duration = states.media_player.kitchen.attributes.media_duration %}
           {% set seconds = duration % 60 %}

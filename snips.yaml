@@ -8,9 +8,19 @@ ActivateObject:
           {% endif %}
         data_template:
           entity_id: "switch.{{ device | string }}"
+      - service_template: script.sonos_working
+        data_template:
+          language: 'en'
+          message: !include confirmtts.yaml
+
 StationPlay:
     action:
       - service: media_player.select_source
         data_template:
           entity_id: "media_player.{{ location | string }}"
           source: "{{ station | string }}"
+
+      - service_template: script.sonos_working
+        data_template:
+          language: 'en'
+          message: !include confirmtts.yaml

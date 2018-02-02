@@ -1,0 +1,14 @@
+>
+      {{ [
+      "Okay",
+      "Sure",
+      "If you insist",
+      "Done",
+      "You got it",
+      "Done",
+      "There you go",
+      "Consider it done",
+      "As you wish",
+      "No Problem",
+      "Done boss"
+      ] | random }}
