@@ -10,7 +10,6 @@ default_view:
     - group.weather_card_forecast
     - sensor.eta_homebrandeis
     - sensor.eta_homebu
-    - zwave_
 alltrackers:
   entities:
     - group.alltrackers
@@ -23,6 +22,7 @@ switches:
   entities:
     - switch.living_room_tv
     - switch.bedroom_tv
+    - switch.neo_coolcam_power_plug_12a_switch
 lands:
   view: yes
   entities:
