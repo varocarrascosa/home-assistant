@@ -29,7 +29,7 @@ WhereIntent:
       - service: script.sonos_working
         data_template:
           language: 'en'
-          message:
+          message: >
             {% if entity == "alvaro" -%}
               "Alvaro seems to be {{ states.group.alvaro_tracker.state }}"
             {%- else -%}
