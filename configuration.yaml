@@ -17,6 +17,9 @@ homeassistant:
 
 python_script:
 
+zwave:
+  usb_path: /dev/ttyACM0
+
 http:
   api_password: !secret mainpass
 
