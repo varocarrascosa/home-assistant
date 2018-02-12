@@ -183,4 +183,4 @@ mqtt:
 #alexa:
   #intents: !include_dir_merge_named alexa
 zwave:
-  usb_path: /dev/ttyACM0
+  usb_path: /dev/ttyACM1
