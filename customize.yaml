@@ -46,4 +46,3 @@ media_player.kitchen:
   entity_picture: ''
 switch.neo_coolcam_power_plug_12a_switch:
   friendly_name: Living Room Back Light
-  icon: mdi:light

@@ -184,3 +184,21 @@ mqtt:
   #intents: !include_dir_merge_named alexa
 zwave:
   usb_path: /dev/ttyACM1
+
+
+google_assistant:
+  project_id: homeassistantac802
+  client_id: wflagfhafvhlajvfhlvlfaf
+  access_token: awdafagegasggsagssaggarwgasfafa
+  api_key: AIzaSyANFCWjfNMA14ANZwRDhNBiG1e5ZB4aJZA
+  exposed_domains:
+    - switch
+    - light
+    - group
+  entity_config:
+    switch.neo_coolcam_power_plug_12a_switch:
+      name: Custom Name for Google Assistant
+      aliases:
+        - bright lights
+        - entry lights
+      type: light
